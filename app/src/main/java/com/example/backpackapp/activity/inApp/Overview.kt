@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.backpackapp.R
 import com.example.backpackapp.adapter.ViewPagerOverviewAdapter
@@ -17,6 +19,19 @@ import kotlinx.android.synthetic.main.activity_overview.*
 @Suppress("DEPRECATION", "ControlFlowWithEmptyBody", "SameParameterValue")
 class Overview : AppCompatActivity() {
 
+    companion object {
+        var layoutContainFragment: ViewPager? = null
+        var bottomNavigation: BottomNavigationView? = null
+        fun roundBack(supportFragmentManager: FragmentManager) {
+            val viewPagerOverviewAdapter = ViewPagerOverviewAdapter(
+                supportFragmentManager,
+                0
+            )
+            layoutContainFragment?.adapter = viewPagerOverviewAdapter
+            bottomNavigation?.menu?.findItem(R.id.menu_home_overview)?.isChecked = true
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
@@ -25,6 +40,10 @@ class Overview : AppCompatActivity() {
             supportFragmentManager,
             FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
         )
+
+        bottomNavigation = findViewById(R.id.bottom_navigation_overview_activity)
+        layoutContainFragment = findViewById(R.id.layout_contain_fragment_overview_backpack)
+
         layout_contain_fragment_overview_backpack.adapter = viewPagerOverviewAdapter
 
         layout_contain_fragment_overview_backpack.addOnPageChangeListener(object :

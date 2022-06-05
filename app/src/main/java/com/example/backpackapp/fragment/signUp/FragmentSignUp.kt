@@ -5,7 +5,9 @@ package com.example.backpackapp.fragment.signUp
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,6 +23,7 @@ import com.example.backpackapp.parameter.Parameters
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
+import java.util.regex.Pattern
 
 
 @Suppress("ControlFlowWithEmptyBody", "UNUSED_EXPRESSION", "DEPRECATION")
@@ -52,6 +55,57 @@ class FragmentSignUp : Fragment(), View.OnClickListener {
         img_btn_hide_show_password.setOnClickListener(this)
         btn_sign_up_backpack.setOnClickListener(this)
         progressDialog = ProgressDialog(activity)
+
+        edt_email_backpack.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (Pattern.matches(
+                        "[a-zA-Z_0-9]{0,1000}" + "@" + "gmail" + "\\." + "com",
+                        s.toString()
+                    ) || Pattern.matches(
+                        "[a-zA-Z_0-9]{0,1000}" + "\\." + "[a-zA-Z_0-9]{0,1000}" + "@" + "gmail" + "\\." + "com",
+                        s.toString()
+                    ) && !Pattern.matches("\t", s.toString())
+                ) {
+                    tv_waring_sign_up_email.visibility = View.GONE
+                    "".also { tv_waring_sign_up_email.text = it }
+                } else {
+                    tv_waring_sign_up_email.visibility = View.VISIBLE
+                    Parameters.CHECK_FORMAT_EMAIL_REGISTER.also {
+                        tv_waring_sign_up_email.text = it
+                    }
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+        })
+
+        edt_password_backpack.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (Pattern.matches(
+                        "[a-zA-Z_0-9]{6,1000}",
+                        s.toString()
+                    ) && !Pattern.matches("\t", s.toString())
+                ) {
+                    tv_waring_sign_up_password.visibility = View.GONE
+                    "".also { tv_waring_sign_up_password.text = it }
+                } else {
+                    tv_waring_sign_up_password.visibility = View.VISIBLE
+                    Parameters.CHECK_PASSWORD.also { tv_waring_sign_up_password.text = it }
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+        })
     }
 
     override fun onClick(p0: View?) {

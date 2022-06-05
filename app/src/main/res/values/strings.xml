@@ -86,4 +86,6 @@
     <string name="edt_search_member_chat_hint">Search by user or places</string>
     <string name="tv_title_chat">Chats</string>
     <string name="name_user_item_rcv_member_chat">Alex</string>
+    <string name="message_user_item_rcv_member_chat">Hey when are you going?</string>
+    <string name="time_user_send_message_item_rcv_member_chat">9:45AM</string>
 </resources>

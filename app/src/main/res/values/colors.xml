@@ -17,6 +17,7 @@
     <!--    Fragment_Sign_Up-->
     <color name="round_back_text_backpack">#000000</color>
     <color name="text_backpack_sign_up_to_log_in">#9F9F9F</color>
+    <color name="text_waring">#FF0000</color>
 
     <!--    Fragment_Log_In-->
     <color name="text_forgot_password_backpack_log_in">#395AFF</color>

@@ -69,6 +69,19 @@
         app:layout_constraintVertical_bias="0.077"
         tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_email_backpack"
+        android:textColor="@color/text_waring"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/tv_waring_sign_up_margin_start"
+        android:layout_marginEnd="@dimen/edt_sign_up_backpack_margin_start_end"
+        android:id="@+id/tv_waring_sign_up_email"/>
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edt_password_backpack"
         android:layout_width="match_parent"
@@ -89,6 +102,18 @@
         app:layout_constraintTop_toBottomOf="@id/edt_email_backpack"
         app:layout_constraintVertical_bias="0.077"
         tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_password_backpack"
+        android:textColor="@color/text_waring"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/tv_waring_sign_up_margin_start"
+        android:layout_marginEnd="@dimen/edt_sign_up_backpack_margin_start_end"
+        android:id="@+id/tv_waring_sign_up_password"/>
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/img_btn_hide_show_password"

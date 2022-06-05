@@ -5,6 +5,7 @@ object Parameters {
     const val TIME_SPLASH = 500
     const val TAG = "Connect_Firebase"
     const val REGISTER_FAIL = "Registration failed password should be at least 6 characters"
+    const val CHECK_PASSWORD = "Password should be at least 6 characters"
     const val SUCCESSFUL_REGISTRATION = "successful registration"
     const val EMPTY_PHONE_NUMBER = "You have not entered your phone number"
     const val CHECK_INPUT_INFORMATION = "You have not entered enough information"

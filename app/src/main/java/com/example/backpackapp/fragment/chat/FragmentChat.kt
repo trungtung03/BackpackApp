@@ -4,10 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.backpackapp.R
+import com.example.backpackapp.`object`.chat.MemberChat
+import com.example.backpackapp.activity.inApp.Overview
+import com.example.backpackapp.adapter.adapterChat.MemberChatAdapter
+import com.google.firebase.auth.ktx.*
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_chat_overview.*
+import java.util.*
 
 class FragmentChat : Fragment() {
+    private val listMemberChat by lazy { arrayListOf<MemberChat>() }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,5 +29,75 @@ class FragmentChat : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        actionView()
+    }
+
+    private fun actionView() {
+        round_back_chat.setOnClickListener { Overview.roundBack((activity as AppCompatActivity).supportFragmentManager) }
+
+        addList()
+        val memberChatAdapter = activity?.let { MemberChatAdapter(it, listMemberChat) }
+        GridLayoutManager(activity, 1).also { rcv_member_chat.layoutManager = it }
+        memberChatAdapter.also { rcv_member_chat.adapter = it }
+    }
+
+    private fun addList() {
+        val user = Firebase.auth.currentUser ?: return
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = user.photoUrl.toString(),
+                nameUser = user.displayName.toString(),
+                message = "Hello!!",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member1.png?alt=media&token=1ad6d5a8-3df4-4f26-87e9-10aaf61aa200",
+                nameUser = "Alex",
+                message = "Hey when are you going?",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member2.png?alt=media&token=a9c4f776-fe26-4a69-ba67-d0754603fcbd",
+                nameUser = "Sandra",
+                message = "I would love to take this trip with ...",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member3.png?alt=media&token=16a1429b-9f87-4e32-a0f7-755f963f976b",
+                nameUser = "Lisa",
+                message = "Sure, lets do it.",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member4.png?alt=media&token=aed59a90-f438-4c37-bb5a-136715ab041a",
+                nameUser = "Mike",
+                message = "Yes, it was an amazing experience",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member5.png?alt=media&token=911a0510-a925-40be-9166-e1bb7bd15225",
+                nameUser = "Jennifer",
+                message = "Loved it out there.",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
+        listMemberChat.add(
+            MemberChat(
+                avatarUser = "https://firebasestorage.googleapis.com/v0/b/backpack-app-d7709.appspot.com/o/member6.png?alt=media&token=29872873-6fb2-4777-9e86-b4ee32baa147",
+                nameUser = "Travis",
+                message = "Can't wait to do it again",
+                timeSendMessage = Calendar.getInstance().time
+            )
+        )
     }
 }

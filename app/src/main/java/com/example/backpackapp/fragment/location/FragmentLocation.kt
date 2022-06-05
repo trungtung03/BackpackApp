@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.backpackapp.R
 import com.example.backpackapp.`object`.location.InvitesLocation
 import com.example.backpackapp.`object`.location.RequestsLocation
+import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterLocation.InvitesAdapter
 import com.example.backpackapp.adapter.adapterLocation.RequestsAdapter
 import com.google.firebase.auth.ktx.auth
@@ -38,6 +40,8 @@ class FragmentLocation : Fragment() {
     }
 
     private fun actionView() {
+        round_backpack_location.setOnClickListener { Overview.roundBack((activity as AppCompatActivity).supportFragmentManager) }
+
         if (user == null) {
             return
         }
