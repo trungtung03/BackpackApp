@@ -82,4 +82,8 @@
     <string name="text_title_add_trip">Add a trip</string>
 
     <!--    Chat-->
+    <string name="tv_title_search_chat">Search</string>
+    <string name="edt_search_member_chat_hint">Search by user or places</string>
+    <string name="tv_title_chat">Chats</string>
+    <string name="name_user_item_rcv_member_chat">Alex</string>
 </resources>

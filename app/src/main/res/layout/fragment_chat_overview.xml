@@ -6,13 +6,75 @@
     android:layout_height="match_parent">
 
     <include
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/round_back_chat"
         layout="@layout/round_back_backpack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_search_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_title_search_chat_margin_start"
+        android:layout_marginTop="@dimen/tv_title_search_chat_margin_top"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_title_search_chat_line_height"
+        android:text="@string/tv_title_search_chat"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_title_search_chat_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_back_chat"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_search_member_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/edt_search_member_chat_margin_start"
+        android:layout_marginTop="@dimen/edt_search_member_chat_margin_top"
+        android:layout_marginEnd="@dimen/edt_search_member_chat_margin_end"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/edt_search_member_chat_hint"
+        android:lineHeight="@dimen/edt_search_member_chat_line_height"
+        android:paddingStart="@dimen/edt_search_member_chat_padding_start"
+        android:paddingTop="@dimen/edt_search_member_chat_padding_top"
+        android:paddingBottom="@dimen/edt_search_member_chat_padding_bottom"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+        android:textSize="@dimen/edt_search_member_chat_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_search_chat"
+        tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_title_chat_margin_start"
+        android:layout_marginTop="@dimen/tv_title_chat_margin_top"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_title_chat_line_height"
+        android:text="@string/tv_title_chat"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_title_chat_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_search_member_chat"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_member_chat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rcv_member_chat_height"
+        android:layout_marginStart="@dimen/rcv_member_chat_margin_start"
+        android:layout_marginTop="@dimen/rcv_member_chat_margin_top"
+        android:layout_marginEnd="@dimen/rcv_member_chat_margin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_chat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
