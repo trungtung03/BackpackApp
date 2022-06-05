@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/round_back_sign_up_2"
+        layout="@layout/round_back_backpack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_sign_up_02_backpack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_sign_up_02_backpack_margin_start"
+        android:layout_marginTop="@dimen/text_sign_up_02_backpack_margin_top"
+        android:layout_marginEnd="@dimen/text_sign_up_02_backpack_margin_end"
+        android:fontFamily="@font/poppins_extrabold"
+        android:lineHeight="@dimen/text_line_height_sign_up_2_backpack"
+        android:text="@string/text_backpack_sign_up_02"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_sign_up_02_backpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    <View
+        android:id="@+id/view_signup_02_backpack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view_sign_up_02_backpack"
+        android:layout_marginStart="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+        android:layout_marginTop="@dimen/edt_number_phone_sign_up_02_backpack_margin_top"
+        android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+        android:background="@color/text_backpack_sign_up_to_log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_sign_up_02_backpack" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_picker_sign_up_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_defaultLanguage="VIETNAMESE"
+        app:ccp_defaultNameCode="VN"
+        app:ccp_showFullName="false"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="true"
+        app:layout_constraintBottom_toTopOf="@id/view_signup_02_backpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_phone_number_sign_up_02"
+        android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_medium"
+        android:inputType="phone"
+        android:lineHeight="@dimen/line_height_edt_sign_up_02_backpack"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_edt_sign_up_02_backpack"
+        app:layout_constraintBottom_toTopOf="@id/view_signup_02_backpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/country_picker_sign_up_02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985"
+        tools:ignore="SpUsage,UnusedAttribute" />
+
+    <include
+        layout="@layout/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_next_sign_up_02_backpack_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_signup_02_backpack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

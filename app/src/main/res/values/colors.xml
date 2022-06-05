@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    Splash_1-->
+    <color name="text_backpack_splash_color">#FFD500</color>
+    <color name="title_backpack_splash_color">#9F9F9F</color>
+    <color name="background_button_sign_up_splash">#FFFFFF</color>
+    <color name="backpack_splash_text_button_sign_up">#395AFF</color>
+
+    <!--    Fragment_Sign_Up-->
+    <color name="round_back_text_backpack">#000000</color>
+    <color name="text_backpack_sign_up_to_log_in">#9F9F9F</color>
+
+    <!--    Fragment_Log_In-->
+    <color name="text_forgot_password_backpack_log_in">#395AFF</color>
+
+    <!--    Fragment_Comeback-->
+    <color name="text_not_you_color">#777777</color>
+    <color name="color_background_custom_toast">#B2FF81</color>
+
+    <!--    Fragment_Guide-->
+    <color name="background_button_join_guide">#FFD500</color>
+</resources>

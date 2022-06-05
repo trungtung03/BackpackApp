@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/splash_background_backpack.xml" value="0.2445" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_chat_overview.xml" value="0.2015625" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/splash_activity.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable-v24/backpack_splash_custom_button_log_in.xml" value="0.261" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/background_indicator.xml" value="0.2905" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/backpack_sign_up_02_custom_button.xml" value="0.2905" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/backpack_splash_custom_button.xml" value="0.261" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/custom_button_join_guide.xml" value="0.2905" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/custom_toast.xml" value="0.19" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/ic_slpash_speed_backpack.xml" value="0.261" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/image_profile_custom.xml" value="0.2905" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/splash_background_backpack.xml" value="0.261" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/text_overview.xml" value="0.2905" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/fragment_comeback.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_invites_trip_location.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_requests_trip_location.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/activity_overview.xml" value="0.18" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/button_next.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/custom_toast.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_chat.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_comeback.xml" value="0.33" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide.xml" value="0.2" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_01.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_02.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_03.xml" value="0.22" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_04.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_home.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_home_overview.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_location.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_location_overview.xml" value="0.2" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_log_in.xml" value="0.33" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_log_in_recover.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_profile_overview.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_sign_up_02.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/image_photo_guide.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_previous_trip.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_travel_photo.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/round_back_backpack.xml" value="0.25" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/splash_activity.xml" value="0.2" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/splash_speed.xml" value="0.1796875" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/three_ellipse_overview.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/menu/menu_navigation.xml" value="1.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

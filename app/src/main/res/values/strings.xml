@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Backpack</string>
+
+    <!--    Splash_1-->
+    <string name="backpack_splash_text">backpack</string>
+    <string name="backpack_splash_title">Travel with people. Make new friends.</string>
+    <string name="backpack_splash_button_sign_up">Sign up</string>
+    <string name="backpack_splash_button_log_in">Log in</string>
+
+    <!--    Fragment_Sign_Up-->
+    <string name="round_back_backpack">back</string>
+    <string name="text_sign_up_backpack">Login</string>
+    <string name="hint_edit_text_name">Name</string>
+    <string name="hint_edit_text_email">Email</string>
+    <string name="hint_edit_text_password">Password</string>
+
+    <!--    Fragment_Log_In-->
+    <string name="text_backpack_forgot_password_log_in">Forgot Password?</string>
+    <string name="text_login_backpack">Sign up</string>
+    <string name="text_backpack_log_in_recover">Recover\nyour account</string>
+    <string name="hint_edt_log_in_recover_backpack">Enter email, username or phone number</string>
+
+    <!--    Fragment_Sign_Up-->
+    <string name="text_backpack_sign_up_02">Your phone\nnumber</string>
+    <string name="text_button_next_bacpack_sign_up_02">Next</string>
+
+    <!--    Fragment_ComeBack-->
+    <string name="title_comeback_backpack">backpack</string>
+    <string name="text_welcome_comeback_backpack">Welcome back</string>
+    <string name="name_accounts_comeback_backpack">Matt</string>
+    <string name="text_not_you_comeback_backpack">Not you?</string>
+
+    <!--    Fragment_Guide-->
+    <string name="text_guide_backpack">Add trips</string>
+    <string name="text_skip_guide_backpack">Skip</string>
+    <string name="text_message_guide_backpack">Easily add your create your trip, and\n let people know where you\'re heading.</string>
+
+    <!--    Fragment_Guide_02-->
+    <string name="text_button_guide_02_backpack">Join</string>
+    <string name="text_message_guide_02_backpack">Discover where people are going, and\njoin them on their trips.</string>
+    <string name="text_title_guide_02_backpack">Discover</string>
+
+    <!--    Fragment_Guide_03-->
+    <string name="text_invite_guide_03_backpack">Invite</string>
+    <string name="text_title_guide_03_backpack">Invitations</string>
+    <string name="text_message_guide_03_backpack">Ask people to join you on\nyour trips.</string>
+    <string name="text_button_guide_03_backpack">Got it</string>
+
+    <!--    Menu_Overview-->
+    <string name="title_menu_home_overview">Home</string>
+    <string name="title_menu_message_overview">Message</string>
+    <string name="title_menu_location_overview">Location</string>
+    <string name="title_menu_profile_overview">Profile</string>
+
+    <!--    Profile-->
+    <string name="text_in_route_overview_backpack">IN ROUTE</string>
+    <string name="text_count_overview_backpack">7</string>
+    <string name="text_day_trip_overview_backpack">day trip</string>
+    <string name="text_to_country_overview_backpack">JAPAN</string>
+    <string name="text_name_profile_overview_backpack">Alex</string>
+    <string name="text_reviews_overview_backpack">Very Experienced</string>
+    <string name="text_mileage_overview_backpack">50,000 mi</string>
+    <string name="text_backpacker_overview_profile">Backpacker</string>
+    <string name="text_next_trip_overview_profile">Next trip</string>
+    <string name="text_button_edit_profile_overview">Edit</string>
+    <string name="text_travel_photo_overview_profile">Travel photos</string>
+    <string name="text_previous_trip_overview_profile">Photos of travel from previous trips</string>
+    <string name="tv_previous_trip_profile">Previous Trips</string>
+    <string name="tv_trip_in_the_months">Trips she has taken in the past months</string>
+    <string name="tv_date_time_overview_backpack">Wed, 4 NOV</string>
+    <string name="item_name_country_rcv_travel_photo">Bali</string>
+
+    <!--    Location-->
+    <string name="text_title_trips_location">Trips</string>
+    <string name="edt_select_country_location_text">Select a country</string>
+    <string name="text_requests_title_location">Requests</string>
+    <string name="text_see_all_location">See all</string>
+    <string name="text_ask_location">Hey when are you going?</string>
+    <string name="text_invites_location">Invites</string>
+    <string name="text_name_profile_location">You</string>
+    <string name="text_comment_invites_location" tools:ignore="Typos">Wanna join me on this trip?</string>
+    <string name="text_title_add_trip">Add a trip</string>
+
+    <!--    Chat-->
+</resources>

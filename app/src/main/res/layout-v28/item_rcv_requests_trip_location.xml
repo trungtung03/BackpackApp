@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/item_rcv_previous_trip_padding_start_and_end"
+    android:paddingTop="@dimen/item_rcv_previous_trip_padding_top_and_bottom"
+    android:paddingEnd="@dimen/item_rcv_previous_trip_padding_start_and_end"
+    android:paddingBottom="@dimen/item_rcv_previous_trip_padding_top_and_bottom">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_rcv_image_avatar_requests_location"
+        android:layout_width="@dimen/item_rcv_image_avatar_requests_location_width_and_height"
+        android:layout_height="@dimen/item_rcv_image_avatar_requests_location_width_and_height"
+        android:src="@drawable/avatar_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/start_reviews_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_reviews_overview_backpack_size"
+        app:cardCornerRadius="@dimen/card_view_rcv_previous_trip_radius"
+        app:cardElevation="@dimen/card_view_shadow_rcv_travel_photo_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_rcv_image_avatar_requests_location"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_rcv_requests_trip_overview_location_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/overview_background_height"
+                android:scaleType="fitXY"
+                android:src="@drawable/background_toolbar_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rcv_requests_trip_tv_count_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_count_overview_backpack_margin_start"
+                android:layout_marginTop="@dimen/text_count_overview_backpack_margin_top"
+                android:background="@drawable/text_overview"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:lineHeight="@dimen/text_count_overview_backpack_line_height"
+                android:paddingStart="@dimen/text_count_overview_backpack_padding_start"
+                android:paddingEnd="@dimen/text_count_overview_backpack_padding_end"
+                android:text="@string/text_count_overview_backpack"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_count_overview_backpack_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rcv_requests_trip_tv_day_trip_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_day_trip_overview_backpack_margin_start"
+                android:layout_marginTop="@dimen/text_day_trip_overview_backpack_margin_top"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_bold"
+                android:lineHeight="@dimen/text_day_trip_overview_backpack_line_height"
+                android:text="@string/text_day_trip_overview_backpack"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_day_trip_overview_backpack_size"
+                app:layout_constraintStart_toEndOf="@+id/item_rcv_requests_trip_tv_count_overview_location_backpack"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rcv_requests_trip_tv_date_time_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_date_time_overview_backpack_margin_top"
+                android:layout_marginEnd="@dimen/tv_date_time_overview_backpack_margin_end"
+                android:fontFamily="@font/poppins_medium"
+                android:lineHeight="@dimen/tv_date_time_overview_backpack_line_height"
+                android:text="@string/tv_date_time_overview_backpack"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_date_time_overview_backpack_size"
+                app:fontFamily="@font/poppins_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/item_rcv_requests_trip_tv_to_country_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_to_country_overview_backpack_margin_top"
+                android:layout_marginEnd="@dimen/text_to_country_overview_backpack_margin_end"
+                app:ccp_contentColor="@color/white"
+                app:ccp_defaultLanguage="VIETNAMESE"
+                app:ccp_defaultNameCode="RU"
+                app:ccp_showArrow="false"
+                app:ccp_showFlag="false"
+                app:ccp_showFullName="true"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="false"
+                app:ccp_textSize="@dimen/text_to_country_overview_backpack_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_rcv_requests_trip_tv_date_time_overview_location_backpack"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            <LinearLayout
+                android:id="@+id/item_rcv_requests_trip_layout_ellipse_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_ellipse_overview_backpack_margin_top"
+                android:layout_marginBottom="@dimen/layout_ellipse_overview_backpack_margin_bottom"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/item_rcv_requests_trip_tv_to_country_overview_location_backpack"
+                app:layout_constraintTop_toBottomOf="@id/item_rcv_requests_trip_tv_date_time_overview_location_backpack">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_1"
+                    tools:ignore="InefficientWeight" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ellipse_overview_margin_start_and_end"
+                    android:layout_marginEnd="@dimen/ellipse_overview_margin_start_and_end"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_2"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_3" />
+
+            </LinearLayout>
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/item_rcv_requests_trip_text_from_country_overview_location_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_from_country_overview_backpack_margin_top"
+                app:ccp_contentColor="@color/white"
+                app:ccp_defaultLanguage="VIETNAMESE"
+                app:ccp_defaultNameCode="VN"
+                app:ccp_showArrow="false"
+                app:ccp_showFlag="false"
+                app:ccp_showFullName="true"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="false"
+                app:ccp_textSize="@dimen/text_to_country_overview_backpack_size"
+                app:layout_constraintEnd_toStartOf="@id/item_rcv_requests_trip_layout_ellipse_overview_location_backpack"
+                app:layout_constraintTop_toBottomOf="@id/item_rcv_requests_trip_tv_date_time_overview_location_backpack" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_rcv_requests_trip_item_airplane_mode_overview_location"
+                android:layout_width="@dimen/item_rcv_previous_trip_item_airplane_mode_overview_width"
+                android:layout_height="@dimen/item_rcv_previous_trip_item_airplane_mode_overview_height"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_airplane_mode_overview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/item_rcv_requests_trip_text_from_country_overview_location_backpack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

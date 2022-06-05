@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/image_round_back_backpack_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/round_back_backpack_margin_start"
+            android:layout_marginTop="@dimen/round_back_backpack_margin_top"
+            android:background="@android:color/transparent"
+            android:src="@drawable/round_back_backpack_sign_up"
+            android:stateListAnimator="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/round_back_text_backpack_margin_left"
+            android:layout_marginTop="@dimen/round_back_text_backpack_margin_top"
+            android:fontFamily="@font/poppins_medium"
+            android:lineHeight="@dimen/round_back_text_backpack_line_height"
+            android:text="@string/round_back_backpack"
+            android:textColor="@color/round_back_text_backpack"
+            android:textSize="@dimen/round_back_text_size_backpack"
+            app:layout_constraintLeft_toRightOf="@id/image_round_back_backpack_login"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded,SpUsage,UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
