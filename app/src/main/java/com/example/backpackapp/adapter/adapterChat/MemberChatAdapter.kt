@@ -16,11 +16,17 @@ class MemberChatAdapter(val context: Context, private val memberChat: ArrayList<
     RecyclerView.Adapter<MemberChatAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         @SuppressLint("SimpleDateFormat")
-        fun bindViewHolder(context: Context, memberChat: ArrayList<MemberChat>, position: Int) {
+        fun bindViewHolder(
+            context: Context,
+            memberChat: ArrayList<MemberChat>,
+            position: Int
+        ) {
             with(context).load(memberChat[position].avatarUser).error(R.drawable.avatar_default)
                 .into(itemView.avatar_user_item_rcv_member_chat)
             memberChat[position].nameUser.also { itemView.name_user_item_rcv_member_chat.text = it }
-            memberChat[position].message.also { itemView.message_user_item_rcv_member_chat.text = it }
+            memberChat[position].message.also {
+                itemView.message_user_item_rcv_member_chat.text = it
+            }
             SimpleDateFormat("hh:mma").format(memberChat[position].timeSendMessage)
                 .also { itemView.time_user_send_message_item_rcv_member_chat.text = it }
         }

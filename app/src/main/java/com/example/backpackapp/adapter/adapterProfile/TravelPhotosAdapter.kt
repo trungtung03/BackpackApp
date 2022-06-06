@@ -16,8 +16,15 @@ class TravelPhotosAdapter(
 ) :
     RecyclerView.Adapter<TravelPhotosAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageTravelPhoto = itemView.image_item_travel_photo_rcv!!
-        val nameCountry = itemView.tv_item_country_rcv!!
+        fun bindViewHolder(
+            context: Context,
+            travelPhotosProfile: ArrayList<TravelPhotosProfile>,
+            position: Int
+        ) {
+            Glide.with(context).load(travelPhotosProfile[position].image)
+                .into(itemView.image_item_travel_photo_rcv)
+            itemView.tv_item_country_rcv.text = travelPhotosProfile[position].country
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,9 +34,7 @@ class TravelPhotosAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val travelPhotosProfile: TravelPhotosProfile = listPhoto[position]
-        Glide.with(context).load(travelPhotosProfile.image).into(holder.imageTravelPhoto)
-        holder.nameCountry.text = travelPhotosProfile.country
+        holder.bindViewHolder(context, listPhoto, position)
     }
 
     override fun getItemCount(): Int {

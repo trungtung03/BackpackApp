@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/splash_background_backpack.xml" value="0.2445" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_invites_trip_location.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/activity_overview.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_chat_overview.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.5" />
