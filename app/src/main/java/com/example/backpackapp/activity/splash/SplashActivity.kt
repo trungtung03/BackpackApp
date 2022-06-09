@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.splash_activity.*
 
 
+@Suppress("SameParameterValue")
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     @SuppressLint("ResourceAsColor")

@@ -31,7 +31,6 @@ class FragmentLogin : Fragment(), View.OnClickListener {
     private var isCheckClick: Boolean = false
     private lateinit var progressDialog: ProgressDialog
 
-
     private fun createCustomToast(image: Int, message: String) {
         val toast = Toast(activity)
         toast.apply {
