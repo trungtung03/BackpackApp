@@ -34,11 +34,10 @@ class FragmentGuide : Fragment() {
 
     private var countCLick = 0
     private fun actionView() {
-        val viewPagerGuideAdapter = ViewPagerGuideAdapter(
+        view_pager_guide_backpack.adapter = ViewPagerGuideAdapter(
             (activity as AppCompatActivity).supportFragmentManager,
             FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
         )
-        view_pager_guide_backpack.adapter = viewPagerGuideAdapter
         guide_indicator_backpack.setViewPager(view_pager_guide_backpack)
         btn_next_guide.setOnClickListener {
             countCLick += 1

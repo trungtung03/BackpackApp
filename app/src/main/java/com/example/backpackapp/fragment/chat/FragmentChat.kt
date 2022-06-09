@@ -36,9 +36,9 @@ class FragmentChat : Fragment() {
         round_back_chat.setOnClickListener { Overview.roundBack((activity as AppCompatActivity).supportFragmentManager) }
 
         addList()
-        val memberChatAdapter = activity?.let { MemberChatAdapter(it, listMemberChat) }
         GridLayoutManager(activity, 1).also { rcv_member_chat.layoutManager = it }
-        memberChatAdapter.also { rcv_member_chat.adapter = it }
+        activity?.let { MemberChatAdapter(it, listMemberChat) }
+            .also { rcv_member_chat.adapter = it }
     }
 
     private fun addList() {

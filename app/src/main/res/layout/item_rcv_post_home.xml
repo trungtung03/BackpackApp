@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/item_rcv_post_home_margin_top">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatar_item_rcv_post_home"
@@ -48,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/card_view_contains_information_item_rcv_post_home_margin_top"
         app:cardCornerRadius="@dimen/card_view_contains_information_item_rcv_post_home_radius"
+        app:cardElevation="@dimen/card_view_contains_information_item_rcv_post_home_card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar_item_rcv_post_home">
@@ -61,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_trip_item_rcv_post_home"
                 android:scaleType="fitXY"
-                android:src="@drawable/image_trip_item_rcv_post_home"
+                android:src="@drawable/image_trip_item_rcv_post_home_02"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -294,53 +296,71 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_describe_item_rcv_post_home">
 
-                <RelativeLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    tools:ignore="UselessParent">
+                    app:cardCornerRadius="@dimen/card_view_contains_information_item_rcv_post_home_radius"
+                    app:cardElevation="@dimen/card_view_contains_information_item_rcv_post_home_card_elevation">
 
-                    <VideoView
-                        android:id="@+id/video_view_item_rcv_post"
-                        android:layout_width="@dimen/video_view_item_rcv_post_width"
-                        android:layout_height="@dimen/video_view_item_rcv_post_height" />
-
-                    <androidx.appcompat.widget.AppCompatImageButton
-                        android:id="@+id/image_btn_pause_or_start_video"
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:src="@drawable/pause_video_view_item_rcv_posts_home" />
+                        android:layout_alignParentStart="true"
+                        tools:ignore="UselessParent">
 
-                </RelativeLayout>
+                        <VideoView
+                            android:id="@+id/video_view_item_rcv_post"
+                            android:layout_width="@dimen/video_view_item_rcv_post_width"
+                            android:layout_height="@dimen/video_view_item_rcv_post_height" />
 
-                <RelativeLayout
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/image_btn_pause_or_start_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/pause_video_view_item_rcv_posts_home" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    tools:ignore="RelativeOverlap,UselessLeaf">
+                    app:cardCornerRadius="@dimen/card_view_contains_information_item_rcv_post_home_radius"
+                    app:cardElevation="@dimen/card_view_contains_information_item_rcv_post_home_card_elevation"
+                    tools:ignore="RelativeOverlap">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/image_more_item_rcv_posts_home"
-                        android:layout_width="@dimen/image_more_item_rcv_posts_home_width"
-                        android:layout_height="@dimen/image_more_item_rcv_posts_home_height"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/image_more_item_rcv_posts_home" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/amount_image_item_rcv_post_home"
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:background="@android:color/transparent"
-                        android:fontFamily="@font/poppins_bold"
-                        android:lineHeight="@dimen/amount_image_item_rcv_post_home_line_height"
-                        android:text="@string/amount_image_item_rcv_post_home"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/amount_image_item_rcv_post_home_size"
-                        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+                        tools:ignore="RelativeOverlap,UselessLeaf">
 
-                </RelativeLayout>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/image_more_item_rcv_posts_home"
+                            android:layout_width="@dimen/image_more_item_rcv_posts_home_width"
+                            android:layout_height="@dimen/image_more_item_rcv_posts_home_height"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image_more_item_rcv_posts_home" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/amount_image_item_rcv_post_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/poppins_bold"
+                            android:lineHeight="@dimen/amount_image_item_rcv_post_home_line_height"
+                            android:text="@string/amount_image_item_rcv_post_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/amount_image_item_rcv_post_home_size"
+                            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
 

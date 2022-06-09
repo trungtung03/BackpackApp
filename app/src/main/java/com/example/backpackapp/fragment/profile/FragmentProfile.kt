@@ -99,17 +99,17 @@ class FragmentProfile : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         addList()
-        val travelPhotosAdapter = activity?.let { TravelPhotosAdapter(it, listTravelPhoto) }
         rcv_photo_from_previous_trip.layoutManager = GridLayoutManager(activity, 1)
         rcv_photo_from_previous_trip.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        rcv_photo_from_previous_trip.adapter = travelPhotosAdapter
+        activity?.let { TravelPhotosAdapter(it, listTravelPhoto) }
+            .also { rcv_photo_from_previous_trip.adapter = it }
 
-        val previousTripAdapter = activity?.let { PreviousTripAdapter(it, listPreviousTripProfile) }
         rcv_trips_taken_in_past_months.layoutManager = GridLayoutManager(activity, 1)
         rcv_trips_taken_in_past_months.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        rcv_trips_taken_in_past_months.adapter = previousTripAdapter
+        activity?.let { PreviousTripAdapter(it, listPreviousTripProfile) }
+            .also { rcv_trips_taken_in_past_months.adapter = it }
 
         actionView()
     }

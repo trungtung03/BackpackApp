@@ -51,23 +51,21 @@ class FragmentLocation : Fragment() {
         }
 
         addList()
-        val requestsAdapter = activity?.let { RequestsAdapter(it, listRequestsLocation) }
         GridLayoutManager(activity, 1).also { rcv_requests_location.layoutManager = it }
         LinearLayoutManager(
             activity,
             LinearLayoutManager.HORIZONTAL,
             false
         ).also { rcv_requests_location.layoutManager = it }
-        requestsAdapter.also { rcv_requests_location.adapter = it }
+        activity?.let { RequestsAdapter(it, listRequestsLocation) }.also { rcv_requests_location.adapter = it }
 
-        val invitesAdapter = activity?.let { InvitesAdapter(it, listInvitesLocation) }
         GridLayoutManager(activity, 1).also { rcv_invites_location.layoutManager = it }
         LinearLayoutManager(
             activity,
             LinearLayoutManager.HORIZONTAL,
             false
         ).also { rcv_invites_location.layoutManager = it }
-        invitesAdapter.also { rcv_invites_location.adapter = it }
+        activity?.let { InvitesAdapter(it, listInvitesLocation) }.also { rcv_invites_location.adapter = it }
 
         actionSeeAll()
 

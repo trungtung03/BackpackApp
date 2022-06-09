@@ -104,4 +104,6 @@
     <string name="number_of_turns_item_rcv_post_home">7</string>
     <string name="tv_describe_item_rcv_post_home">On a trip to America, looking for someone to join me on this epic journey through American</string>
     <string name="amount_image_item_rcv_post_home">+5</string>
+    <string name="tv_amount_of_people_like_posts">+2</string>
+    <string name="item_tv_service">Ticket</string>
 </resources>

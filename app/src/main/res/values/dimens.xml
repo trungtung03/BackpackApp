@@ -394,4 +394,18 @@
     <dimen name="rcv_service_item_rcv_post_home_margin_end">16.6dp</dimen>
     <dimen name="rcv_service_item_rcv_post_home_margin_top">18.5dp</dimen>
     <dimen name="rcv_service_item_rcv_post_home_margin_bottom">16dp</dimen>
+    <dimen name="avatar_user_like_posts_width">30dp</dimen>
+    <dimen name="avatar_user_like_posts_height">30dp</dimen>
+    <dimen name="tv_amount_of_people_like_posts_width">30dp</dimen>
+    <dimen name="tv_amount_of_people_like_posts_height">30dp</dimen>
+    <dimen name="tv_amount_of_people_like_posts_size">12dp</dimen>
+    <dimen name="tv_amount_of_people_like_posts_line_height">18dp</dimen>
+    <dimen name="avatar_user02_like_posts_margin_start">15dp</dimen>
+    <dimen name="tv_amount_of_people_like_posts_margin_start">30dp</dimen>
+    <dimen name="item_tv_service_size">10dp</dimen>
+    <dimen name="item_tv_service_line_height">16dp</dimen>
+    <dimen name="item_tv_service_margin_start">17.5dp</dimen>
+    <dimen name="item_tv_service_margin_end">17.5dp</dimen>
+    <dimen name="card_view_contains_information_item_rcv_post_home_card_elevation">0dp</dimen>
+    <dimen name="item_rcv_post_home_margin_top">38dp</dimen>
 </resources>
