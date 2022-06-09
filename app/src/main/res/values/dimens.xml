@@ -96,7 +96,7 @@
     <dimen name="text_line_height_guide_02_backpack">30dp</dimen>
     <dimen name="button_next_guide_margin_top">701dp</dimen>
 
-    <!--    Profile-->
+    <!--   Fragment Profile-->
     <dimen name="text_in_route_overview_backpack_margin_start">28dp</dimen>
     <dimen name="text_in_route_overview_backpack_line_height">16dp</dimen>
     <dimen name="text_in_route_overview_backpack_size">10dp</dimen>
@@ -195,7 +195,7 @@
     <dimen name="layout_ellipse_overview_backpack_margin_top">10dp</dimen>
     <dimen name="circle_image_avatar_profile_overview_width_and_height">50dp</dimen>
 
-    <!--    Location-->
+    <!--   Fragment Location-->
     <dimen name="text_title_trips_location_margin_start">25dp</dimen>
     <dimen name="text_title_trips_location_margin_top">22dp</dimen>
     <dimen name="text_title_trips_location_line_height">30dp</dimen>
@@ -248,7 +248,7 @@
     <dimen name="item_rcv_image_avatar_requests_location_width_and_height">50dp</dimen>
     <dimen name="item_rcv_image_avatar_invites_location_width_and_height">50dp</dimen>
 
-    <!--    Chat-->
+    <!--   Fragment Chat-->
     <dimen name="tv_title_search_chat_margin_start">25dp</dimen>
     <dimen name="tv_title_search_chat_margin_top">27dp</dimen>
     <dimen name="tv_title_search_chat_line_height">30dp</dimen>
@@ -287,4 +287,34 @@
     <dimen name="user_online_item_rcv_member_chat_margin_top">11dp</dimen>
     <dimen name="item_member_chat_margin_top">14.5dp</dimen>
     <dimen name="item_member_chat_margin_bottom">14.5dp</dimen>
+
+    <!--   Fragment Home-->
+    <dimen name="tv_title_traveling_home_size">20dp</dimen>
+    <dimen name="tv_title_traveling_home_line_height">30dp</dimen>
+    <dimen name="tv_title_traveling_home_margin_top">12dp</dimen>
+    <dimen name="tv_title_traveling_home_margin_start">25dp</dimen>
+    <dimen name="icon_search_city_home_margin_top">14dp</dimen>
+    <dimen name="icon_search_city_home_margin_end">14dp</dimen>
+    <dimen name="edt_search_city_home_margin_top">7dp</dimen>
+    <dimen name="edt_search_city_home_margin_start">16dp</dimen>
+    <dimen name="edt_search_city_home_margin_end">16dp</dimen>
+    <dimen name="edt_search_city_home_padding_start">16dp</dimen>
+    <dimen name="edt_search_city_home_padding_top">12dp</dimen>
+    <dimen name="edt_search_city_home_padding_bottom">12dp</dimen>
+    <dimen name="edt_search_city_home_text_size">12dp</dimen>
+    <dimen name="edt_search_city_home_line_height">18dp</dimen>
+    <dimen name="tv_title_popular_destinations_home_size">20dp</dimen>
+    <dimen name="tv_title_popular_destinations_home_line_height">30dp</dimen>
+    <dimen name="tv_title_popular_destinations_home_margin_top">38dp</dimen>
+    <dimen name="tv_title_popular_destinations_home_margin_start">2dp</dimen>
+    <dimen name="rcv_destinations_home_margin_start">18dp</dimen>
+    <dimen name="rcv_destinations_home_margin_end">18dp</dimen>
+    <dimen name="rcv_destinations_home_margin_top">17dp</dimen>
+    <dimen name="rcv_post2_home_margin_top">38dp</dimen>
+    <dimen name="rcv_post2_home_margin_end">16dp</dimen>
+    <dimen name="rcv_post2_home_margin_start">16dp</dimen>
+    <dimen name="scroll_view_contain_rcv_home_height">0dp</dimen>
+    <dimen name="scroll_view_contain_rcv_home_margin_top">38dp</dimen>
+    <dimen name="scroll_view_contain_rcv_home_margin_start">16dp</dimen>
+    <dimen name="scroll_view_contain_rcv_home_margin_end">16dp</dimen>
 </resources>
