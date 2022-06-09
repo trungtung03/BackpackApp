@@ -266,6 +266,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/month_of_travel_item_rcv_post_home_size"
                     tools:ignore="HardcodedText,RelativeOverlap,SpUsage,UnusedAttribute" />
+
             </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatTextView
