@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide.with
 import com.example.backpackapp.R
 import com.example.backpackapp.`object`.profile.PreviousTripProfile
-import kotlinx.android.synthetic.main.item_rcv_previous_trip.view.*
+import kotlinx.android.synthetic.main.item_rcv_previous_trip_profile.view.*
 import java.text.SimpleDateFormat
 
 class PreviousTripAdapter(
@@ -43,7 +43,7 @@ class PreviousTripAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             itemView = from(context)
-                .inflate(R.layout.item_rcv_previous_trip, parent, false)
+                .inflate(R.layout.item_rcv_previous_trip_profile, parent, false)
         )
     }
 

@@ -52,7 +52,7 @@
     <string name="title_menu_location_overview">Location</string>
     <string name="title_menu_profile_overview">Profile</string>
 
-    <!--    Profile-->
+    <!--   Fragment Profile-->
     <string name="text_in_route_overview_backpack">IN ROUTE</string>
     <string name="text_count_overview_backpack">7</string>
     <string name="text_day_trip_overview_backpack">day trip</string>
@@ -70,7 +70,7 @@
     <string name="tv_date_time_overview_backpack">Wed, 4 NOV</string>
     <string name="item_name_country_rcv_travel_photo">Bali</string>
 
-    <!--    Location-->
+    <!--   Fragment Location-->
     <string name="text_title_trips_location">Trips</string>
     <string name="edt_select_country_location_text">Select a country</string>
     <string name="text_requests_title_location">Requests</string>
@@ -81,11 +81,16 @@
     <string name="text_comment_invites_location" tools:ignore="Typos">Wanna join me on this trip?</string>
     <string name="text_title_add_trip">Add a trip</string>
 
-    <!--    Chat-->
+    <!--   Fragment Chat-->
     <string name="tv_title_search_chat">Search</string>
     <string name="edt_search_member_chat_hint">Search by user or places</string>
     <string name="tv_title_chat">Chats</string>
     <string name="name_user_item_rcv_member_chat">Alex</string>
     <string name="message_user_item_rcv_member_chat">Hey when are you going?</string>
     <string name="time_user_send_message_item_rcv_member_chat">9:45AM</string>
+
+    <!--   Fragment Home-->
+    <string name="tv_title_traveling_home">Traveling to?</string>
+    <string name="edt_search_city_home_hint">Enter a name of a city you\'re traveling to</string>
+    <string name="tv_title_popular_destinations_home">Popular destinations</string>
 </resources>

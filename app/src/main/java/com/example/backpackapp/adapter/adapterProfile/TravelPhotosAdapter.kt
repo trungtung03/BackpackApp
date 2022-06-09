@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.backpackapp.R
 import com.example.backpackapp.`object`.profile.TravelPhotosProfile
-import kotlinx.android.synthetic.main.item_rcv_travel_photo.view.*
+import kotlinx.android.synthetic.main.item_rcv_travel_photo_profile.view.*
 
 class TravelPhotosAdapter(
     val context: Context,
@@ -29,7 +29,7 @@ class TravelPhotosAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(context).inflate(R.layout.item_rcv_travel_photo, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.item_rcv_travel_photo_profile, parent, false)
         )
     }
 

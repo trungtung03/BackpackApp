@@ -7,8 +7,14 @@
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_invites_trip_location.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/activity_overview.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_chat_overview.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_01.xml" value="0.5" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_home_overview.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_profile_overview.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_member_chat.xml" value="0.371875" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_post_home.xml" value="0.24083129584352078" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_previous_trip.xml" value="0.371875" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_travel_photo.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/splash_activity.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable-v24/backpack_splash_custom_button_log_in.xml" value="0.261" />
         <entry key="..\:/Users/tungn/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/background_indicator.xml" value="0.2905" />
