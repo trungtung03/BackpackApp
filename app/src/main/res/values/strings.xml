@@ -93,4 +93,15 @@
     <string name="tv_title_traveling_home">Traveling to?</string>
     <string name="edt_search_city_home_hint">Enter a name of a city you\'re traveling to</string>
     <string name="tv_title_popular_destinations_home">Popular destinations</string>
+    <string name="name_item_post_home">Jennifer</string>
+    <string name="time_item_post_home">2 hours ago</string>
+    <string name="tv_day_trip_item_rcv_post_home">day trip</string>
+    <string name="name_country_item_rcv_post_home">Bali</string>
+    <string name="journey_item_rcv_post_home">On trip</string>
+    <string name="btn_join_item_rcv_post_home_text">Join</string>
+    <string name="tv_next_trip_item_rcv_post_home">Next trip</string>
+    <string name="month_of_travel_item_rcv_post_home">12 Jan</string>
+    <string name="number_of_turns_item_rcv_post_home">7</string>
+    <string name="tv_describe_item_rcv_post_home">On a trip to America, looking for someone to join me on this epic journey through American</string>
+    <string name="amount_image_item_rcv_post_home">+5</string>
 </resources>

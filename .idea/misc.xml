@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/background_button_join_guide.xml" value="0.2395" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/splash_background_backpack.xml" value="0.2445" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_invites_trip_location.xml" value="0.371875" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_requests_trip_location.xml" value="0.28940217391304346" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/activity_overview.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_chat_overview.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_guide_01.xml" value="0.5" />
@@ -12,7 +14,7 @@
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_profile_overview.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_member_chat.xml" value="0.371875" />
-        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_post_home.xml" value="0.24083129584352078" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_post_home.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_previous_trip.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/item_rcv_travel_photo.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout/splash_activity.xml" value="0.2006340579710145" />
