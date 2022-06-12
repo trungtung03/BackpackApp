@@ -52,67 +52,16 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title_traveling_home"
         tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />
 
-    <ScrollView
-        android:id="@+id/scroll_view_contain_rcv_home"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_post_home"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/scroll_view_contain_rcv_home_height"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/scroll_view_contain_rcv_home_margin_start"
+        android:layout_marginTop="@dimen/scroll_view_contain_rcv_home_margin_top"
+        android:layout_marginEnd="@dimen/scroll_view_contain_rcv_home_margin_end"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/scroll_view_contain_rcv_home_margin_top"
-        android:layout_marginStart="@dimen/scroll_view_contain_rcv_home_margin_start"
-        android:layout_marginEnd="@dimen/scroll_view_contain_rcv_home_margin_end"
-        android:scrollbarThumbVertical="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/edt_search_city_home">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="ScrollViewSize">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_post_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_title_popular_destinations_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/tv_title_popular_destinations_home_margin_start"
-                android:layout_marginTop="@dimen/tv_title_popular_destinations_home_margin_top"
-                android:fontFamily="@font/poppins_bold"
-                android:lineHeight="@dimen/tv_title_popular_destinations_home_line_height"
-                android:text="@string/tv_title_popular_destinations_home"
-                android:textColor="@color/black"
-                android:textSize="@dimen/tv_title_popular_destinations_home_size"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcv_post_home"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_destinations_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/rcv_destinations_home_margin_top"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_title_popular_destinations_home" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_post2_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/rcv_post2_home_margin_top"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcv_destinations_home" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@id/edt_search_city_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
