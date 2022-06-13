@@ -3,7 +3,6 @@
 package com.example.backpackapp.activity.inApp
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
@@ -29,6 +28,15 @@ class Overview : AppCompatActivity() {
             )
             layoutContainFragment?.adapter = viewPagerOverviewAdapter
             bottomNavigation?.menu?.findItem(R.id.menu_home_overview)?.isChecked = true
+        }
+
+        fun moveFragment(supportFragmentManager: FragmentManager) {
+            val viewPagerOverviewAdapter = ViewPagerOverviewAdapter(
+                supportFragmentManager,
+                2
+            )
+            layoutContainFragment?.adapter = viewPagerOverviewAdapter
+            bottomNavigation?.menu?.findItem(R.id.menu_location_overview)?.isChecked = true
         }
     }
 

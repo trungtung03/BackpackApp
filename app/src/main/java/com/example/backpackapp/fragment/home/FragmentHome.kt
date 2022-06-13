@@ -10,6 +10,7 @@ import com.example.backpackapp.R
 import com.example.backpackapp.`object`.home.ListData
 import com.example.backpackapp.`object`.home.popularDestinations.PopularDestinations
 import com.example.backpackapp.`object`.home.posts.Posts
+import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adpterHome.ListDataAdapter
 import com.example.backpackapp.parameter.GA
 import kotlinx.android.synthetic.main.fragment_home_overview.*
@@ -30,7 +31,6 @@ class FragmentHome : Fragment() {
 
     private fun actionView() {
         addList()
-//        GridLayoutManager(activity, 1).also { rcv_post_home.layoutManager = it }
         LinearLayoutManager(activity).also { rcv_post_home.layoutManager = it }
         val listDataAdapter = activity?.let { ListDataAdapter(it, getListData()) }
         listDataAdapter.also { rcv_post_home.adapter = it }

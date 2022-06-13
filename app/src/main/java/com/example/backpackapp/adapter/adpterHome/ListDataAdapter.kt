@@ -37,13 +37,8 @@ class ListDataAdapter(
                         RecyclerView.VERTICAL,
                         false
                     ).also { itemView.rcv_list_data.layoutManager = it }
-                    val postsAdapter = listData[position].listPosts?.let {
-                        PostsAdapter(
-                            context,
-                            it
-                        )
-                    }
-                    itemView.rcv_list_data.adapter = postsAdapter
+                    itemView.rcv_list_data.adapter =
+                        listData[position].listPosts?.let { PostsAdapter(context, it) }
                 }
                 GA.TYPE_POPULAR_DESTINATIONS -> {
                     GridLayoutManager(context, 1).also { itemView.rcv_list_data.layoutManager = it }
@@ -52,14 +47,13 @@ class ListDataAdapter(
                         RecyclerView.HORIZONTAL,
                         false
                     ).also { itemView.rcv_list_data.layoutManager = it }
-                    val popularDestinationsAdapter =
+                    itemView.rcv_list_data.adapter =
                         listData[position].listPopularDestinations?.let {
                             PopularDestinationsAdapter(
                                 context,
                                 it
                             )
                         }
-                    itemView.rcv_list_data.adapter = popularDestinationsAdapter
                 }
             }
         }

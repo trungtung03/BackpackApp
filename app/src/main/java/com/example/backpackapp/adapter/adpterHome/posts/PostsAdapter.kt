@@ -1,12 +1,16 @@
 package com.example.backpackapp.adapter.adpterHome.posts
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.backpackapp.R
 import com.example.backpackapp.`object`.home.posts.Posts
+import com.example.backpackapp.activity.inApp.Overview
+import com.example.backpackapp.fragment.home.FragmentHome
 import kotlinx.android.synthetic.main.item_rcv_post_home.view.*
 
 class PostsAdapter(
