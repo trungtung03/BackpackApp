@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.inApp.Overview
+import com.example.backpackapp.adapter.adpterHome.ListDataAdapter
 import com.example.backpackapp.model.home.ListData
 import com.example.backpackapp.model.home.popularDestinations.PopularDestinations
 import com.example.backpackapp.model.home.posts.Posts
-import com.example.backpackapp.adapter.adpterHome.ListDataAdapter
 import com.example.backpackapp.parameter.GA
 import kotlinx.android.synthetic.main.fragment_home_overview.*
 
@@ -32,6 +32,7 @@ class FragmentHome : Fragment() {
     private fun actionView() {
         addList()
         LinearLayoutManager(activity).also { rcv_post_home.layoutManager = it }
+        rcv_post_home.isFocusable = false
         val listDataAdapter = activity?.let {
             ListDataAdapter(it, getListData(), onClickJoin = {
                 Overview.moveFragment()

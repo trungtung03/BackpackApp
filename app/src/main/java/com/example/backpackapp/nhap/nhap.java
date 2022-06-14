@@ -1,13 +1,23 @@
 package com.example.backpackapp.nhap;
 
+import android.os.Bundle;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class nhap extends AppCompatActivity {
-//    val photoGuideAdapter = activity?.let { PhotoGuideAdapter(it, getListPhoto()) }
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        RecyclerView recyclerView = null;
+//        recyclerView.setFocusable(false);
+//    }
+    //    val photoGuideAdapter = activity?.let { PhotoGuideAdapter(it, getListPhoto()) }
 //    view_pager.adapter = photoGuideAdapter
 //        circle_indicator.setViewPager(view_pager)
 //    photoGuideAdapter?.registerDataSetObserver(circle_indicator.dataSetObserver)

@@ -28,61 +28,71 @@
         app:layout_constraintTop_toBottomOf="@+id/round_backpack_location"
         tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/layout_contain_select_country_location"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/layout_contain_select_country_location_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_contain_select_country_location_margin_start"
         android:layout_marginTop="@dimen/layout_contain_select_country_location_margin_top"
+        android:layout_marginEnd="@dimen/layout_contain_select_country_location_margin_end"
+        app:cardCornerRadius="@dimen/layout_contain_select_country_location_radius"
+        app:cardElevation="@dimen/layout_contain_select_country_location_card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_trips_location"
-        tools:ignore="UselessLeaf">
+        app:layout_constraintTop_toBottomOf="@id/tv_title_trips_location">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/image_ellipse_backpack_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/image_ellipse_backpack_location_margin_start"
-            android:scaleType="fitXY"
-            android:src="@drawable/ellipse_backpack_splash_1"
-            tools:ignore="ContentDescription" />
-
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/select_country_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/select_country_location_margin_start"
-            android:layout_marginTop="@dimen/select_country_location_margin_top"
-            android:layout_marginBottom="@dimen/select_country_location_margin_start_bottom"
-            android:layout_toEndOf="@id/image_ellipse_backpack_location"
-            app:ccp_defaultLanguage="VIETNAMESE"
-            app:ccp_defaultNameCode="VN"
-            app:ccp_showArrow="false"
-            app:ccp_showFlag="true"
-            app:ccp_showFullName="false"
-            app:ccp_showNameCode="false"
-            app:ccp_showPhoneCode="false" />
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_select_country_location"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/edt_select_country_location_margin_start"
-            android:layout_toEndOf="@id/select_country_location"
-            android:background="@android:color/transparent"
-            android:enabled="false"
-            android:fontFamily="@font/poppins_medium"
-            android:hint="@string/edt_select_country_location_text"
-            android:lineHeight="@dimen/edt_select_country_location_line_height"
-            android:paddingTop="@dimen/edt_select_country_location_text_padding_top"
-            android:textColor="@color/black"
-            android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-            android:textSize="@dimen/edt_select_country_location_text_size"
-            tools:ignore="Autofill,HardcodedText,LabelFor,SpUsage,TextFields,UnusedAttribute" />
+            tools:ignore="UselessLeaf">
 
-    </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_ellipse_backpack_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/image_ellipse_backpack_location_margin_start"
+                android:scaleType="fitXY"
+                android:src="@drawable/ellipse_backpack_splash_1"
+                tools:ignore="ContentDescription" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/select_country_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/select_country_location_margin_start"
+                android:layout_marginTop="@dimen/select_country_location_margin_top"
+                android:layout_marginBottom="@dimen/select_country_location_margin_start_bottom"
+                android:layout_toEndOf="@id/image_ellipse_backpack_location"
+                app:ccp_defaultLanguage="VIETNAMESE"
+                app:ccp_defaultNameCode="VN"
+                app:ccp_showArrow="false"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="false" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_select_country_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/edt_select_country_location_margin_start"
+                android:layout_toEndOf="@id/select_country_location"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="@string/edt_select_country_location_text"
+                android:lineHeight="@dimen/edt_select_country_location_line_height"
+                android:paddingTop="@dimen/edt_select_country_location_text_padding_top"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+                android:textSize="@dimen/edt_select_country_location_text_size"
+                tools:ignore="Autofill,HardcodedText,LabelFor,SpUsage,TextFields,UnusedAttribute" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:layout_width="match_parent"
