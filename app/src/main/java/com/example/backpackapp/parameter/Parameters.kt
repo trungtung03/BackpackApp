@@ -32,4 +32,5 @@ object Parameters {
     const val WAIT_DATA_IS_LOADING = "Please wait a moment while the data is loading"
     const val LOADING_DATA = "Loading....."
     const val CHECK_FORMAT_EMAIL_REGISTER = "Email format is not correct"
+    const val IS_EMPTY = ""
 }

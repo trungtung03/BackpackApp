@@ -71,7 +71,7 @@ class FragmentSignUp : Fragment(), View.OnClickListener {
                     ) && !Pattern.matches("\t", s.toString())
                 ) {
                     tv_waring_sign_up_email.visibility = GONE
-                    "".also { tv_waring_sign_up_email.text = it }
+                    Parameters.IS_EMPTY.also { tv_waring_sign_up_email.text = it }
                 } else {
                     tv_waring_sign_up_email.visibility = View.VISIBLE
                     Parameters.CHECK_FORMAT_EMAIL_REGISTER.also {
