@@ -12,7 +12,8 @@ import kotlinx.android.synthetic.main.item_rcv_post_home.view.*
 class PostsAdapter(
     val context: Context,
     private var posts: ArrayList<Posts>,
-    private val onClickJoin: () -> Unit
+    private val onClickJoin: () -> Unit,
+    private val onClickItem: () -> Unit
 ) : RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViewHolder(
@@ -34,6 +35,7 @@ class PostsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindViewHolder(context, posts, position)
         holder.itemView.btn_join_item_rcv_post_home.setOnClickListener { onClickJoin.invoke() }
+        holder.itemView.setOnClickListener { onClickJoin.invoke() }
     }
 
     override fun getItemCount(): Int {

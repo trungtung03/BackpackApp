@@ -36,6 +36,8 @@ class FragmentHome : Fragment() {
         val listDataAdapter = activity?.let {
             ListDataAdapter(it, getListData(), onClickJoin = {
                 Overview.moveFragment()
+            }, onClickItem = {
+                return@ListDataAdapter
             })
         }
         listDataAdapter.also { rcv_post_home.adapter = it }
