@@ -24,6 +24,7 @@ import com.example.backpackapp.parameter.Parameters
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
+import kotlinx.android.synthetic.main.round_back_backpack.view.*
 import java.util.regex.Pattern
 
 
