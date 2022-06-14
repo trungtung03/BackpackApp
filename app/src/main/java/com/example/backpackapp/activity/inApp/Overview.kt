@@ -13,7 +13,6 @@ import com.example.backpackapp.adapter.ViewPagerOverviewAdapter
 import com.example.backpackapp.base.viewPager.ZoomOutPageTransformer
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_overview.*
 
 var layoutContainFragment: ViewPager? = null
 var bottomNavigation: BottomNavigationView? = null
@@ -37,16 +36,14 @@ class Overview : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
 
-        val viewPagerOverviewAdapter = ViewPagerOverviewAdapter(
-            supportFragmentManager,
-            FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
-        )
-
         bottomNavigation = findViewById(R.id.bottom_navigation_overview_activity)
         layoutContainFragment = findViewById(R.id.layout_contain_fragment_overview_backpack)
 
         layoutContainFragment?.setPageTransformer(true, ZoomOutPageTransformer())
-        layoutContainFragment?.adapter = viewPagerOverviewAdapter
+        layoutContainFragment?.adapter = ViewPagerOverviewAdapter(
+            supportFragmentManager,
+            FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+        )
 
         layoutContainFragment?.addOnPageChangeListener(object :
             OnPageChangeListener {
@@ -75,7 +72,7 @@ class Overview : AppCompatActivity() {
 
         })
 
-        bottom_navigation_overview_activity.setOnNavigationItemSelectedListener(object :
+        bottomNavigation?.setOnNavigationItemSelectedListener(object :
             NavigationView.OnNavigationItemSelectedListener,
             BottomNavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
