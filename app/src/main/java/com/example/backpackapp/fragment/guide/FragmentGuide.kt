@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.backpackapp.R
@@ -35,9 +34,10 @@ class FragmentGuide : Fragment() {
     private var countCLick = 0
     private fun actionView() {
         view_pager_guide_backpack.adapter = ViewPagerGuideAdapter(
-            (activity as AppCompatActivity).supportFragmentManager,
+            childFragmentManager,
             FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
         )
+        view_pager_guide_backpack.offscreenPageLimit = 3
         guide_indicator_backpack.setViewPager(view_pager_guide_backpack)
         btn_next_guide.setOnClickListener {
             countCLick += 1

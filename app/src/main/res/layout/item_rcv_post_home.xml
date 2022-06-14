@@ -385,7 +385,6 @@
                 android:layout_marginTop="@dimen/image_btn_heart_item_post_home_margin_top"
                 android:layout_marginBottom="@dimen/image_btn_heart_item_post_home_margin_bottom"
                 android:background="@android:color/transparent"
-                android:src="@drawable/heart_disable_item_rcv_posts_home"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_item_rcv_post_home" />

@@ -44,6 +44,7 @@ class Overview : AppCompatActivity() {
             supportFragmentManager,
             FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
         )
+        layoutContainFragment?.offscreenPageLimit = 3
 
         layoutContainFragment?.addOnPageChangeListener(object :
             OnPageChangeListener {
