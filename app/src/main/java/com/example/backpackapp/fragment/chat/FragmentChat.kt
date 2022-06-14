@@ -13,7 +13,6 @@ import com.example.backpackapp.adapter.adapterChat.MemberChatAdapter
 import com.google.firebase.auth.ktx.*
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_chat_overview.*
-import kotlinx.android.synthetic.main.round_back_backpack.view.*
 import java.util.*
 
 class FragmentChat : Fragment() {

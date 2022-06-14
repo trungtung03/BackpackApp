@@ -16,7 +16,6 @@ import com.example.backpackapp.parameter.Parameters
 import kotlinx.android.synthetic.main.button_next.*
 import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up_02.*
-import kotlinx.android.synthetic.main.round_back_backpack.view.*
 
 @Suppress("DEPRECATION")
 class FragmentSignUp02 : Fragment() {
