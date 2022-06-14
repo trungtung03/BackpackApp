@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide.*
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.home.user.UserLikePosts
+import com.example.backpackapp.model.home.user.UserLikePosts
 import kotlinx.android.synthetic.main.item_user_like_posts_rcv_posts_home.view.*
 
 class UserLikePostsAdapter(

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide.with
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.profile.PreviousTripProfile
+import com.example.backpackapp.model.profile.PreviousTripProfile
 import kotlinx.android.synthetic.main.item_rcv_previous_trip_profile.view.*
 import java.text.SimpleDateFormat
 

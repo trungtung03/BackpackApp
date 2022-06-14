@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.profile.PreviousTripProfile
-import com.example.backpackapp.`object`.profile.TravelPhotosProfile
+import com.example.backpackapp.model.profile.PreviousTripProfile
+import com.example.backpackapp.model.profile.TravelPhotosProfile
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterProfile.PreviousTripAdapter
 import com.example.backpackapp.adapter.adapterProfile.TravelPhotosAdapter

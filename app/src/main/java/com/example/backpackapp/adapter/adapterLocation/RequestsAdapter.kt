@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide.with
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.location.RequestsLocation
+import com.example.backpackapp.model.location.RequestsLocation
 import kotlinx.android.synthetic.main.item_rcv_requests_trip_location.view.*
 import java.text.SimpleDateFormat
 import kotlin.collections.ArrayList

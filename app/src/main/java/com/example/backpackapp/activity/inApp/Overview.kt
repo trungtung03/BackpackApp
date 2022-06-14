@@ -5,12 +5,12 @@ package com.example.backpackapp.activity.inApp
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.backpackapp.R
 import com.example.backpackapp.adapter.ViewPagerOverviewAdapter
+import com.example.backpackapp.base.viewPager.ZoomOutPageTransformer
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_overview.*
@@ -21,21 +21,13 @@ class Overview : AppCompatActivity() {
     companion object {
         var layoutContainFragment: ViewPager? = null
         var bottomNavigation: BottomNavigationView? = null
-        fun roundBack(supportFragmentManager: FragmentManager) {
-            val viewPagerOverviewAdapter = ViewPagerOverviewAdapter(
-                supportFragmentManager,
-                0
-            )
-            layoutContainFragment?.adapter = viewPagerOverviewAdapter
+        fun roundBack() {
+            layoutContainFragment?.currentItem = 0
             bottomNavigation?.menu?.findItem(R.id.menu_home_overview)?.isChecked = true
         }
 
-        fun moveFragment(supportFragmentManager: FragmentManager) {
-            val viewPagerOverviewAdapter = ViewPagerOverviewAdapter(
-                supportFragmentManager,
-                2
-            )
-            layoutContainFragment?.adapter = viewPagerOverviewAdapter
+        fun moveFragment() {
+            layoutContainFragment?.currentItem = 2
             bottomNavigation?.menu?.findItem(R.id.menu_location_overview)?.isChecked = true
         }
     }
@@ -52,6 +44,7 @@ class Overview : AppCompatActivity() {
         bottomNavigation = findViewById(R.id.bottom_navigation_overview_activity)
         layoutContainFragment = findViewById(R.id.layout_contain_fragment_overview_backpack)
 
+        layout_contain_fragment_overview_backpack.setPageTransformer(true, ZoomOutPageTransformer())
         layout_contain_fragment_overview_backpack.adapter = viewPagerOverviewAdapter
 
         layout_contain_fragment_overview_backpack.addOnPageChangeListener(object :

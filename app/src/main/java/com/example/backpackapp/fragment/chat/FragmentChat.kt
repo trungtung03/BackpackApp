@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.chat.MemberChat
+import com.example.backpackapp.model.chat.MemberChat
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterChat.MemberChatAdapter
 import com.google.firebase.auth.ktx.*
@@ -33,7 +32,7 @@ class FragmentChat : Fragment() {
     }
 
     private fun actionView() {
-        round_back_chat.setOnClickListener { Overview.roundBack((activity as AppCompatActivity).supportFragmentManager) }
+        round_back_chat.setOnClickListener { Overview.roundBack() }
 
         addList()
         GridLayoutManager(activity, 1).also { rcv_member_chat.layoutManager = it }

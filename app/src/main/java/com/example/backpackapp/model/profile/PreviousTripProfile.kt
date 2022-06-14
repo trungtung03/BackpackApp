@@ -1,4 +1,4 @@
-package com.example.backpackapp.`object`.profile
+package com.example.backpackapp.model.profile
 
 import java.util.*
 

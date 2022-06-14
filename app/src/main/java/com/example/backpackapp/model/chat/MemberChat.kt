@@ -1,4 +1,4 @@
-package com.example.backpackapp.`object`.chat
+package com.example.backpackapp.model.chat
 
 import java.util.*
 

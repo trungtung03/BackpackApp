@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.home.service.Service
+import com.example.backpackapp.model.home.service.Service
 import kotlinx.android.synthetic.main.item_service_rcv_post_home.view.*
 
 class ServiceAdapter(

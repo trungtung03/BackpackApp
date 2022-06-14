@@ -1,21 +1,18 @@
 package com.example.backpackapp.adapter.adpterHome.posts
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.home.posts.Posts
-import com.example.backpackapp.activity.inApp.Overview
-import com.example.backpackapp.fragment.home.FragmentHome
+import com.example.backpackapp.model.home.posts.Posts
 import kotlinx.android.synthetic.main.item_rcv_post_home.view.*
 
 class PostsAdapter(
     val context: Context,
-    private var posts: ArrayList<Posts>
+    private var posts: ArrayList<Posts>,
+    private val onClickJoin: () -> Unit
 ) : RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViewHolder(
@@ -36,6 +33,7 @@ class PostsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindViewHolder(context, posts, position)
+        holder.itemView.btn_join_item_rcv_post_home.setOnClickListener { onClickJoin.invoke() }
     }
 
     override fun getItemCount(): Int {

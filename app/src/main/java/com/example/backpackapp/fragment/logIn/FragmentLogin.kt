@@ -10,6 +10,7 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -137,7 +138,7 @@ class FragmentLogin : Fragment(), View.OnClickListener {
                                 R.drawable.success_blue,
                                 Parameters.CHECK_LOGIN_SUCCESS
                             )
-                            img_warning_log_in.visibility = View.GONE
+                            img_warning_log_in.visibility = GONE
                             requireActivity().supportFragmentManager.beginTransaction()
                                 .replace(R.id.splash_activity, FragmentGuide())
                                 .remove(FragmentLogin()).addToBackStack(null)

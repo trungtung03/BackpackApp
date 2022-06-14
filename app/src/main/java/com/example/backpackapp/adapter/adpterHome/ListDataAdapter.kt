@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.home.ListData
+import com.example.backpackapp.model.home.ListData
 import com.example.backpackapp.adapter.adpterHome.popularDestinations.PopularDestinationsAdapter
 import com.example.backpackapp.adapter.adpterHome.posts.PostsAdapter
 import com.example.backpackapp.parameter.GA
@@ -17,14 +17,16 @@ import kotlinx.android.synthetic.main.item_rcv_list_data.view.*
 @Suppress("DUPLICATE_LABEL_IN_WHEN")
 class ListDataAdapter(
     val context: Context,
-    private val listData: ArrayList<ListData>
+    private val listData: ArrayList<ListData>,
+    private val onClickJoin: () -> Unit
 ) : RecyclerView.Adapter<ListDataAdapter.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return listData[position].type!!
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, private val onClickJoin: () -> Unit) :
+        RecyclerView.ViewHolder(itemView) {
         fun bindViewHolder(
             context: Context,
             listData: ArrayList<ListData>,
@@ -38,7 +40,7 @@ class ListDataAdapter(
                         false
                     ).also { itemView.rcv_list_data.layoutManager = it }
                     itemView.rcv_list_data.adapter =
-                        listData[position].listPosts?.let { PostsAdapter(context, it) }
+                        listData[position].listPosts?.let { PostsAdapter(context, it, onClickJoin) }
                 }
                 GA.TYPE_POPULAR_DESTINATIONS -> {
                     GridLayoutManager(context, 1).also { itemView.rcv_list_data.layoutManager = it }
@@ -62,7 +64,7 @@ class ListDataAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             itemView = LayoutInflater.from(context)
-                .inflate(R.layout.item_rcv_list_data, parent, false)
+                .inflate(R.layout.item_rcv_list_data, parent, false), onClickJoin
         )
     }
 

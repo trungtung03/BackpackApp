@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.profile.TravelPhotosProfile
+import com.example.backpackapp.model.profile.TravelPhotosProfile
 import kotlinx.android.synthetic.main.item_rcv_travel_photo_profile.view.*
 
 class TravelPhotosAdapter(

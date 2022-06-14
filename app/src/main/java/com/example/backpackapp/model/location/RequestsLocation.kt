@@ -1,10 +1,10 @@
-package com.example.backpackapp.`object`.location
+package com.example.backpackapp.model.location
 
 import java.util.*
 
-class InvitesLocation(
+class RequestsLocation(
     val avatar: String?,
-    val photoInvitesTrip: String?,
+    val photoRequestsTrip: String?,
     val countOverview: Int?,
     val vehicle: String?,
     val dateTime: Date?,

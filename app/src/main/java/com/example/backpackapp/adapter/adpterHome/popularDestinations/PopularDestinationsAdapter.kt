@@ -1,13 +1,12 @@
 package com.example.backpackapp.adapter.adpterHome.popularDestinations
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.backpackapp.R
-import com.example.backpackapp.`object`.home.popularDestinations.PopularDestinations
+import com.example.backpackapp.model.home.popularDestinations.PopularDestinations
 import kotlinx.android.synthetic.main.item_rcv_popular_destinations_home.view.*
 
 class PopularDestinationsAdapter(

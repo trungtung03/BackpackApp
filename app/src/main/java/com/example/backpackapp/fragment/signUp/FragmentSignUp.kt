@@ -12,6 +12,7 @@ import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.Nullable
@@ -69,7 +70,7 @@ class FragmentSignUp : Fragment(), View.OnClickListener {
                         s.toString()
                     ) && !Pattern.matches("\t", s.toString())
                 ) {
-                    tv_waring_sign_up_email.visibility = View.GONE
+                    tv_waring_sign_up_email.visibility = GONE
                     "".also { tv_waring_sign_up_email.text = it }
                 } else {
                     tv_waring_sign_up_email.visibility = View.VISIBLE
@@ -94,7 +95,7 @@ class FragmentSignUp : Fragment(), View.OnClickListener {
                         s.toString()
                     ) && !Pattern.matches("\t", s.toString())
                 ) {
-                    tv_waring_sign_up_password.visibility = View.GONE
+                    tv_waring_sign_up_password.visibility = GONE
                     "".also { tv_waring_sign_up_password.text = it }
                 } else {
                     tv_waring_sign_up_password.visibility = View.VISIBLE

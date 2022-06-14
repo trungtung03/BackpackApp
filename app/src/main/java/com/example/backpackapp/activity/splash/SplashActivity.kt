@@ -54,8 +54,9 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun addFragment(id: Int, fragment: Fragment) {
-        supportFragmentManager.beginTransaction().add(id, fragment).addToBackStack(null).commit()
+    private fun addFragment(id: Int, fragment: Fragment, backstack: String? = null) {
+        supportFragmentManager.beginTransaction().add(id, fragment).addToBackStack(backstack)
+            .commit()
     }
 
     private fun showButton() {
