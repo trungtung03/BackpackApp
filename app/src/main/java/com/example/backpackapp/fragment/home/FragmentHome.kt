@@ -30,7 +30,6 @@ class FragmentHome : Fragment() {
     }
 
     private fun actionView() {
-        addList()
         LinearLayoutManager(activity).also { rcv_post_home.layoutManager = it }
         rcv_post_home.isFocusable = false
         val listDataAdapter = activity?.let {
@@ -59,9 +58,5 @@ class FragmentHome : Fragment() {
         listData.add(ListData(GA.TYPE_POPULAR_DESTINATIONS, null, listPopularDestinations))
         listData.add(ListData(GA.TYPE_POST, listPosts, null))
         return listData
-    }
-
-    private fun addList() {
-
     }
 }
