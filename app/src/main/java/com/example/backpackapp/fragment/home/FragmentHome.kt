@@ -1,13 +1,16 @@
 package com.example.backpackapp.fragment.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.inApp.Overview
+import com.example.backpackapp.activity.inApp.homePostFullSize.PostFullSizeActivity
 import com.example.backpackapp.adapter.adpterHome.ListDataAdapter
 import com.example.backpackapp.model.home.ListData
 import com.example.backpackapp.model.home.popularDestinations.PopularDestinations
@@ -36,7 +39,11 @@ class FragmentHome : Fragment() {
             ListDataAdapter(it, getListData(), onClickJoin = {
                 Overview.moveFragment()
             }, onClickItem = {
-                return@ListDataAdapter
+                startActivity(Intent(activity, PostFullSizeActivity::class.java))
+                (activity as AppCompatActivity).overridePendingTransition(
+                    R.anim.slide_in_right,
+                    R.anim.slide_in_left
+                )
             })
         }
         listDataAdapter.also { rcv_post_home.adapter = it }

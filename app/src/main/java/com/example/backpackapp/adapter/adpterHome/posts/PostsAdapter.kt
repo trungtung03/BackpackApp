@@ -36,6 +36,7 @@ class PostsAdapter(
         holder.bindViewHolder(context, posts, position)
         holder.itemView.btn_join_item_rcv_post_home.setOnClickListener { onClickJoin.invoke() }
         holder.itemView.setOnClickListener { onClickItem.invoke() }
+        holder.itemView.image_btn_heart_item_post_home
     }
 
     override fun getItemCount(): Int {

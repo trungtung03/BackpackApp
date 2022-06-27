@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.backpackapp.R
+import com.example.backpackapp.base.activity.Activity
 import com.example.backpackapp.base.checkConnect.CheckConnect
 import com.example.backpackapp.fragment.logIn.FragmentComeBack
 import com.example.backpackapp.fragment.logIn.FragmentLogin
@@ -21,13 +22,14 @@ import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.splash_activity.*
 
 
-@Suppress("SameParameterValue")
+@Suppress("SameParameterValue", "unused", "MemberVisibilityCanBePrivate")
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_activity)
+        Activity.fullScreen(window)
         Handler().postDelayed({
             showButton()
             image_ellipse_backpack_splash.setImageResource(R.drawable.ellipse_backpack_splash_1_yellow)

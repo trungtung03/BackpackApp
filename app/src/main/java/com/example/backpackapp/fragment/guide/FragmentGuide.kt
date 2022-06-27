@@ -7,11 +7,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.inApp.Overview
+import com.example.backpackapp.activity.splash.SplashActivity
 import com.example.backpackapp.adapter.ViewPagerGuideAdapter
+import com.example.backpackapp.parameter.GA
 import kotlinx.android.synthetic.main.fragment_guide.*
 
 
@@ -31,7 +34,6 @@ class FragmentGuide : Fragment() {
         actionView()
     }
 
-    private var countCLick = 0
     private fun actionView() {
         view_pager_guide_backpack.adapter = ViewPagerGuideAdapter(
             childFragmentManager,
@@ -40,8 +42,8 @@ class FragmentGuide : Fragment() {
         view_pager_guide_backpack.offscreenPageLimit = 3
         guide_indicator_backpack.setViewPager(view_pager_guide_backpack)
         btn_next_guide.setOnClickListener {
-            countCLick += 1
-            when (countCLick) {
+            GA.COUNT_CLICK++
+            when (GA.COUNT_CLICK) {
                 3 -> getString(R.string.text_button_guide_03_backpack).also {
                     btn_next_guide.text = it
                 }
@@ -50,10 +52,14 @@ class FragmentGuide : Fragment() {
                         btn_next_guide.text = it
                     }
                     startActivity(Intent(activity, Overview::class.java))
-                    countCLick = 0
+                    (activity as AppCompatActivity).overridePendingTransition(
+                        R.anim.slide_in_right,
+                        R.anim.slide_in_left
+                    )
+                    activity?.finish()
                 }
             }
-            view_pager_guide_backpack.currentItem = countCLick
+            view_pager_guide_backpack.currentItem = GA.COUNT_CLICK
         }
 
         tv_skip_guide_backpack.setOnClickListener {
@@ -63,6 +69,11 @@ class FragmentGuide : Fragment() {
                     Overview::class.java
                 )
             )
+            (activity as AppCompatActivity).overridePendingTransition(
+                R.anim.slide_in_right,
+                R.anim.slide_in_left
+            )
+            activity?.finish()
         }
     }
 }

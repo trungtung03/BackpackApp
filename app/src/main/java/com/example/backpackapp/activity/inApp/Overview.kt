@@ -10,7 +10,9 @@ import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.backpackapp.R
 import com.example.backpackapp.adapter.ViewPagerOverviewAdapter
+import com.example.backpackapp.base.activity.Activity
 import com.example.backpackapp.base.viewPager.ZoomOutPageTransformer
+import com.example.backpackapp.parameter.GA
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -35,6 +37,8 @@ class Overview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
+        Activity.fullScreen(window)
+        GA.COUNT_CLICK = 0
 
         bottomNavigation = findViewById(R.id.bottom_navigation_overview_activity)
         layoutContainFragment = findViewById(R.id.layout_contain_fragment_overview_backpack)

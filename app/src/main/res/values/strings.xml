@@ -106,4 +106,7 @@
     <string name="amount_image_item_rcv_post_home">+5</string>
     <string name="tv_amount_of_people_like_posts">+2</string>
     <string name="item_tv_service">Ticket</string>
+    <string name="tv_name_account_post_full_size">Sia</string>
+    <string name="tv_time_post_full_size">15th Apr</string>
+    <string name="tv_describe_post_full_size">Going on a trip to America, looking for someone to join me on this epic journey through American lifestyle.</string>
 </resources>
