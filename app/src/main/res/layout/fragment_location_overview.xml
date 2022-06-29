@@ -1,279 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <include
-        android:id="@+id/round_backpack_location"
-        layout="@layout/round_back_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_title_trips_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_title_trips_location_margin_start"
-        android:layout_marginTop="@dimen/text_title_trips_location_margin_top"
-        android:fontFamily="@font/poppins_bold"
-        android:lineHeight="@dimen/text_title_trips_location_line_height"
-        android:text="@string/text_title_trips_location"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_title_trips_location_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/round_backpack_location"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/layout_contain_select_country_location"
-        android:layout_width="@dimen/layout_contain_select_country_location_width"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/layout_contain_select_country_location_margin_start"
-        android:layout_marginTop="@dimen/layout_contain_select_country_location_margin_top"
-        android:layout_marginEnd="@dimen/layout_contain_select_country_location_margin_end"
-        app:cardCornerRadius="@dimen/layout_contain_select_country_location_radius"
-        app:cardElevation="@dimen/layout_contain_select_country_location_card_elevation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_trips_location">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessLeaf">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/image_ellipse_backpack_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/image_ellipse_backpack_location_margin_start"
-                android:scaleType="fitXY"
-                android:src="@drawable/ellipse_backpack_splash_1"
-                tools:ignore="ContentDescription" />
-
-            <com.hbb20.CountryCodePicker
-                android:id="@+id/select_country_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/select_country_location_margin_start"
-                android:layout_marginTop="@dimen/select_country_location_margin_top"
-                android:layout_marginBottom="@dimen/select_country_location_margin_start_bottom"
-                android:layout_toEndOf="@id/image_ellipse_backpack_location"
-                app:ccp_defaultLanguage="VIETNAMESE"
-                app:ccp_defaultNameCode="VN"
-                app:ccp_showArrow="false"
-                app:ccp_showFlag="true"
-                app:ccp_showFullName="false"
-                app:ccp_showNameCode="false"
-                app:ccp_showPhoneCode="false" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edt_select_country_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/edt_select_country_location_margin_start"
-                android:layout_toEndOf="@id/select_country_location"
-                android:background="@android:color/transparent"
-                android:enabled="false"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="@string/edt_select_country_location_text"
-                android:lineHeight="@dimen/edt_select_country_location_line_height"
-                android:paddingTop="@dimen/edt_select_country_location_text_padding_top"
-                android:textColor="@color/black"
-                android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/edt_select_country_location_text_size"
-                tools:ignore="Autofill,HardcodedText,LabelFor,SpUsage,TextFields,UnusedAttribute" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/scroll_view_profile_overview_height"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_contain_select_country_location">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="ScrollViewSize">
+        <include
+            android:id="@+id/round_backpack_location"
+            layout="@layout/round_back_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_requests_title_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/text_requests_title_location_margin_start"
-                android:layout_marginTop="@dimen/text_requests_title_location_margin_top"
-                android:fontFamily="@font/poppins_bold"
-                android:lineHeight="@dimen/text_requests_title_location_line_height"
-                android:text="@string/text_requests_title_location"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_requests_title_location_size"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_trips_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_title_trips_location_margin_start"
+            android:layout_marginTop="@dimen/text_title_trips_location_margin_top"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="@dimen/text_title_trips_location_line_height"
+            android:text="@string/text_title_trips_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_title_trips_location_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/round_backpack_location"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_see_all_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_see_all_location_margin_top"
-                android:layout_marginEnd="@dimen/text_see_all_location_margin_end"
-                android:lineHeight="@dimen/text_see_all_location_line_height"
-                android:text="@string/text_see_all_location"
-                android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/text_see_all_location_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_requests_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/rcv_requests_location_margin_start"
-                android:layout_marginTop="@dimen/rcv_requests_location_margin_top"
-                android:layout_marginEnd="@dimen/rcv_requests_location_margin_end"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_requests_title_location" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_ask_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_ask_location_margin_top"
-                android:fontFamily="@font/poppins_medium"
-                android:lineHeight="@dimen/text_ask_location_line_height"
-                android:text="@string/text_ask_location"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_ask_location_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcv_requests_location"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_invites_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/text_invites_location_margin_start"
-                android:layout_marginTop="@dimen/text_invites_location_margin_top"
-                android:fontFamily="@font/poppins_bold"
-                android:lineHeight="@dimen/text_invites_location_line_height"
-                android:text="@string/text_invites_location"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_invites_location_size"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ask_location"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_see_all_invites_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_see_all_invites_location_margin_top"
-                android:layout_marginEnd="@dimen/text_see_all_location_margin_end"
-                android:lineHeight="@dimen/text_see_all_location_line_height"
-                android:text="@string/text_see_all_location"
-                android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/text_see_all_location_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ask_location"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_invites_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/rcv_invites_location_margin_start"
-                android:layout_marginTop="@dimen/rcv_invites_location_margin_top"
-                android:layout_marginEnd="@dimen/rcv_invites_location_margin_end"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_invites_location" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_contain_select_country_location"
+            android:layout_width="@dimen/layout_contain_select_country_location_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_contain_select_country_location_margin_start"
+            android:layout_marginTop="@dimen/layout_contain_select_country_location_margin_top"
+            android:layout_marginEnd="@dimen/layout_contain_select_country_location_margin_end"
+            app:cardCornerRadius="@dimen/layout_contain_select_country_location_radius"
+            app:cardElevation="@dimen/layout_contain_select_country_location_card_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_trips_location">
 
             <RelativeLayout
-                android:id="@+id/layout_contain_comment_invites"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_contain_comment_invites_margin_top"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcv_invites_location">
+                tools:ignore="UselessLeaf">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/image_avatar_invites_comment"
-                    android:layout_width="@dimen/image_avatar_invites_comment_width"
-                    android:layout_height="@dimen/image_avatar_invites_comment_height"
-                    android:src="@drawable/avatar_default" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_name_profile_location"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_ellipse_backpack_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="@dimen/text_name_profile_location_margin_start"
-                    android:layout_toEndOf="@id/image_avatar_invites_comment"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineHeight="@dimen/text_name_profile_location_line_height"
-                    android:text="@string/text_name_profile_location"
-                    android:textSize="@dimen/text_name_profile_location_size"
-                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+                    android:layout_marginStart="@dimen/image_ellipse_backpack_location_margin_start"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ellipse_backpack_splash_1"
+                    tools:ignore="ContentDescription" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_comment_invites_location"
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/select_country_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/text_comment_invites_location_margin_start"
-                    android:layout_toEndOf="@id/tv_name_profile_location"
+                    android:layout_marginStart="@dimen/select_country_location_margin_start"
+                    android:layout_marginTop="@dimen/select_country_location_margin_top"
+                    android:layout_marginBottom="@dimen/select_country_location_margin_start_bottom"
+                    android:layout_toEndOf="@id/image_ellipse_backpack_location"
+                    app:ccp_defaultLanguage="VIETNAMESE"
+                    app:ccp_defaultNameCode="VN"
+                    app:ccp_showArrow="false"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="false" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_select_country_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/edt_select_country_location_margin_start"
+                    android:layout_toEndOf="@id/select_country_location"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:fontFamily="@font/poppins_medium"
-                    android:lineHeight="@dimen/text_comment_invites_location_line_height"
-                    android:text="@string/text_comment_invites_location"
+                    android:hint="@string/edt_select_country_location_text"
+                    android:lineHeight="@dimen/edt_select_country_location_line_height"
+                    android:paddingTop="@dimen/edt_select_country_location_text_padding_top"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/text_comment_invites_location_size"
-                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+                    android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/edt_select_country_location_text_size"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,SpUsage,TextFields,UnusedAttribute" />
 
             </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/image_button_add_trip_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/image_button_add_trip_location_margin_top"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/add_trip_location"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_contain_comment_invites" />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tv_title_add_trip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_title_add_trip_margin_top"
-                android:fontFamily="@font/poppins_medium"
-                android:lineHeight="@dimen/text_title_add_trip_line_height"
-                android:text="@string/text_title_add_trip"
-                android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/text_title_add_trip_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/image_button_add_trip_location"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scroll_view_profile_overview_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_contain_select_country_location">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ScrollViewSize">
 
-    </ScrollView>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_requests_title_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_requests_title_location_margin_start"
+                    android:layout_marginTop="@dimen/text_requests_title_location_margin_top"
+                    android:fontFamily="@font/poppins_bold"
+                    android:lineHeight="@dimen/text_requests_title_location_line_height"
+                    android:text="@string/text_requests_title_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_requests_title_location_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_see_all_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_see_all_location_margin_top"
+                    android:layout_marginEnd="@dimen/text_see_all_location_margin_end"
+                    android:lineHeight="@dimen/text_see_all_location_line_height"
+                    android:text="@string/text_see_all_location"
+                    android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/text_see_all_location_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_requests_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/rcv_requests_location_margin_start"
+                    android:layout_marginTop="@dimen/rcv_requests_location_margin_top"
+                    android:layout_marginEnd="@dimen/rcv_requests_location_margin_end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_requests_title_location" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_ask_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_ask_location_margin_top"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="@dimen/text_ask_location_line_height"
+                    android:text="@string/text_ask_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_ask_location_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_requests_location"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_invites_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_invites_location_margin_start"
+                    android:layout_marginTop="@dimen/text_invites_location_margin_top"
+                    android:fontFamily="@font/poppins_bold"
+                    android:lineHeight="@dimen/text_invites_location_line_height"
+                    android:text="@string/text_invites_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_invites_location_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ask_location"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_see_all_invites_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_see_all_invites_location_margin_top"
+                    android:layout_marginEnd="@dimen/text_see_all_location_margin_end"
+                    android:lineHeight="@dimen/text_see_all_location_line_height"
+                    android:text="@string/text_see_all_location"
+                    android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/text_see_all_location_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ask_location"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_invites_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/rcv_invites_location_margin_start"
+                    android:layout_marginTop="@dimen/rcv_invites_location_margin_top"
+                    android:layout_marginEnd="@dimen/rcv_invites_location_margin_end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invites_location" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_contain_comment_invites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_contain_comment_invites_margin_top"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_invites_location">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_avatar_invites_comment"
+                        android:layout_width="@dimen/image_avatar_invites_comment_width"
+                        android:layout_height="@dimen/image_avatar_invites_comment_height"
+                        android:src="@drawable/avatar_default" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_name_profile_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/text_name_profile_location_margin_start"
+                        android:layout_toEndOf="@id/image_avatar_invites_comment"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineHeight="@dimen/text_name_profile_location_line_height"
+                        android:text="@string/text_name_profile_location"
+                        android:textSize="@dimen/text_name_profile_location_size"
+                        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_comment_invites_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_comment_invites_location_margin_start"
+                        android:layout_toEndOf="@id/tv_name_profile_location"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineHeight="@dimen/text_comment_invites_location_line_height"
+                        android:text="@string/text_comment_invites_location"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_comment_invites_location_size"
+                        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/image_button_add_trip_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_button_add_trip_location_margin_top"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/add_trip_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_contain_comment_invites" />
+
+                <TextView
+                    android:id="@+id/tv_title_add_trip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_title_add_trip_margin_top"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineHeight="@dimen/text_title_add_trip_line_height"
+                    android:text="@string/text_title_add_trip"
+                    android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/text_title_add_trip_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_button_add_trip_location"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

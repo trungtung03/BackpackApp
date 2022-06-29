@@ -1,79 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/white">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="ScrollViewSize">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_skip_guide_backpack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_skip_guide_backpack_margin_top"
-                android:layout_marginEnd="@dimen/text_skip_guide_backpack_margin_top"
-                android:fontFamily="@font/poppins_bold"
-                android:lineHeight="@dimen/text_skip_guide_backpack_line_height"
-                android:text="@string/text_skip_guide_backpack"
-                android:textColor="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/text_skip_guide_backpack_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ScrollViewSize">
 
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/guide_indicator_backpack"
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"
-                android:layout_marginTop="@dimen/indicator_margin_top"
-                app:ci_drawable="@drawable/background_indicator"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tv_skip_guide_backpack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_skip_guide_backpack_margin_top"
+                    android:layout_marginEnd="@dimen/text_skip_guide_backpack_margin_top"
+                    android:fontFamily="@font/poppins_bold"
+                    android:lineHeight="@dimen/text_skip_guide_backpack_line_height"
+                    android:text="@string/text_skip_guide_backpack"
+                    android:textColor="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/text_skip_guide_backpack_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager_guide_backpack"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/image_guide_margin_top"
-                app:layout_constraintBottom_toTopOf="@+id/btn_next_guide"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/guide_indicator_backpack" />
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/guide_indicator_backpack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/guide_indicator_backpack_height"
+                    android:layout_marginTop="@dimen/indicator_margin_top"
+                    app:ci_drawable="@drawable/background_indicator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_next_guide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/button_next_guide_margin_top"
-                android:background="@drawable/backpack_sign_up_02_custom_button"
-                android:fontFamily="@font/poppins_bold"
-                android:lineHeight="@dimen/backpack_splash_text_button_line_height"
-                android:paddingStart="@dimen/text_button_next_backpack_sign_up_02_padding_end_and_start"
-                android:paddingEnd="@dimen/text_button_next_backpack_sign_up_02_padding_end_and_start"
-                android:stateListAnimator="@null"
-                android:text="@string/text_button_next_bacpack_sign_up_02"
-                android:textAllCaps="false"
-                android:textColor="@color/backpack_splash_text_button_sign_up"
-                android:textSize="@dimen/backpack_splash_text_button_size"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.976"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+                <com.example.backpackapp.view.CustomViewPager
+                    android:id="@+id/view_pager_guide_backpack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_pager_guide_backpack_height"
+                    android:layout_marginTop="@dimen/image_guide_margin_top"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_next_guide"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guide_indicator_backpack" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next_guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_next_guide_margin_top"
+                    android:background="@drawable/backpack_sign_up_02_custom_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:lineHeight="@dimen/backpack_splash_text_button_line_height"
+                    android:paddingStart="@dimen/text_button_next_backpack_sign_up_02_padding_end_and_start"
+                    android:paddingEnd="@dimen/text_button_next_backpack_sign_up_02_padding_end_and_start"
+                    android:stateListAnimator="@null"
+                    android:text="@string/text_button_next_bacpack_sign_up_02"
+                    android:textAllCaps="false"
+                    android:textColor="@color/backpack_splash_text_button_sign_up"
+                    android:textSize="@dimen/backpack_splash_text_button_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-    </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

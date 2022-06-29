@@ -1,34 +1,29 @@
 package com.example.backpackapp.fragment.chat
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.backpackapp.R
 import com.example.backpackapp.model.chat.MemberChat
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterChat.MemberChatAdapter
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentChatOverviewBinding
 import com.google.firebase.auth.ktx.*
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_chat_overview.*
 import java.util.*
 
-class FragmentChat : Fragment() {
+class FragmentChat : BaseFragment<FragmentChatOverviewBinding>() {
+    private lateinit var fragmentChatOverviewBinding: FragmentChatOverviewBinding
     private val listMemberChat by lazy { arrayListOf<MemberChat>() }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_chat_overview, container, false)
+    override fun initView(view: View) {
+        fragmentChatOverviewBinding = FragmentChatOverviewBinding.bind(view)
+        actionView()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        actionView()
+    override fun getBinding(): FragmentChatOverviewBinding {
+        fragmentChatOverviewBinding = FragmentChatOverviewBinding.inflate(layoutInflater)
+        return fragmentChatOverviewBinding
     }
 
     private fun actionView() {

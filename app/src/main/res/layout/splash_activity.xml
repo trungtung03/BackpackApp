@@ -1,124 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/splash_activity"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".activity.splash.SplashActivity">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/background_app_backpack" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_splash_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/splash_backpack_height"
-        android:fontFamily="@font/poppins_extrabold"
-        android:lineHeight="@dimen/splash_backpack_light_height"
-        android:text="@string/backpack_splash_text"
-        android:textColor="@color/text_backpack_splash_color"
-        android:textSize="@dimen/splash_backpack_size_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14"
-        tools:ignore="SpUsage,UnusedAttribute" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_ellipse_backpack_splash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/ellipse_backpack_margin_left"
-        android:src="@drawable/ellipse_backpack_splash_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/text_splash_backpack"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179"
-        tools:ignore="RtlHardcoded" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/title_splash_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/title_splash_height"
-        android:layout_marginTop="@dimen/title_backpack_margin_top"
-        android:fontFamily="@font/poppins"
-        android:lineHeight="@dimen/title_splash_line_height"
-        android:text="@string/backpack_splash_title"
-        android:textColor="@color/title_backpack_splash_color"
-        android:textSize="@dimen/title_splash_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_splash_backpack"
-        tools:ignore="SpUsage,UnusedAttribute" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_splash_backpack"
-        app:layout_constraintVertical_bias="0.674">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_sign_up_splash_backpack"
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_app_backpack" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_splash_backpack"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="21dp"
-            android:background="@drawable/backpack_splash_custom_button_sign_up"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:lineHeight="@dimen/backpack_splash_text_button_line_height"
-            android:paddingStart="@dimen/splash_backpack_button_padding_start"
-            android:paddingTop="@dimen/text_button_next_backpack_sign_up_02_padding_top"
-            android:paddingEnd="@dimen/splash_backpack_button_padding_end"
-            android:paddingBottom="@dimen/text_button_next_backpack_sign_up_02_padding_bottom"
-            android:stateListAnimator="@null"
-            android:text="@string/backpack_splash_button_sign_up"
-            android:textAllCaps="false"
-            android:textColor="@color/backpack_splash_text_button_sign_up"
-            android:textSize="@dimen/backpack_splash_text_button_size"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/button_log_in_splash_backpack"
+            android:layout_height="@dimen/splash_backpack_height"
+            android:fontFamily="@font/poppins_extrabold"
+            android:lineHeight="@dimen/splash_backpack_light_height"
+            android:text="@string/backpack_splash_text"
+            android:textColor="@color/text_backpack_splash_color"
+            android:textSize="@dimen/splash_backpack_size_text"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14"
             tools:ignore="SpUsage,UnusedAttribute" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_log_in_splash_backpack"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_ellipse_backpack_splash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_backpack_margin_top"
-            android:background="@drawable/backpack_splash_custom_button_log_in"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:lineHeight="@dimen/backpack_splash_text_button_line_height"
-            android:paddingStart="@dimen/splash_backpack_button_login_padding_start"
-            android:paddingTop="@dimen/text_button_next_backpack_sign_up_02_padding_top"
-            android:paddingEnd="@dimen/splash_backpack_button_login_padding_end"
-            android:paddingBottom="@dimen/text_button_next_backpack_sign_up_02_padding_bottom"
-            android:stateListAnimator="@null"
-            android:text="@string/backpack_splash_button_log_in"
-            android:textAllCaps="false"
-            android:textColor="@color/background_button_sign_up_splash"
-            android:textSize="@dimen/backpack_splash_text_button_size"
-            android:visibility="gone"
+            android:layout_marginLeft="@dimen/ellipse_backpack_margin_left"
+            android:src="@drawable/ellipse_backpack_splash_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/text_splash_backpack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179"
+            tools:ignore="RtlHardcoded" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_splash_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_splash_height"
+            android:layout_marginTop="@dimen/title_backpack_margin_top"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="@dimen/title_splash_line_height"
+            android:text="@string/backpack_splash_title"
+            android:textColor="@color/title_backpack_splash_color"
+            android:textSize="@dimen/title_splash_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_splash_backpack"
+            tools:ignore="SpUsage,UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.585"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_sign_up_splash_backpack"
-            tools:ignore="SpUsage,UnusedAttribute" />
+            app:layout_constraintTop_toBottomOf="@id/title_splash_backpack"
+            app:layout_constraintVertical_bias="0.674">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_sign_up_splash_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/backpack_splash_custom_button_sign_up"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:lineHeight="@dimen/backpack_splash_text_button_line_height"
+                android:paddingStart="@dimen/splash_backpack_button_padding_start"
+                android:paddingTop="@dimen/text_button_next_backpack_sign_up_02_padding_top"
+                android:paddingEnd="@dimen/splash_backpack_button_padding_end"
+                android:paddingBottom="@dimen/text_button_next_backpack_sign_up_02_padding_bottom"
+                android:stateListAnimator="@null"
+                android:text="@string/backpack_splash_button_sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/backpack_splash_text_button_sign_up"
+                android:textSize="@dimen/backpack_splash_text_button_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/button_log_in_splash_backpack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_log_in_splash_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_backpack_margin_top"
+                android:background="@drawable/backpack_splash_custom_button_log_in"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:lineHeight="@dimen/backpack_splash_text_button_line_height"
+                android:paddingStart="@dimen/splash_backpack_button_login_padding_start"
+                android:paddingTop="@dimen/text_button_next_backpack_sign_up_02_padding_top"
+                android:paddingEnd="@dimen/splash_backpack_button_login_padding_end"
+                android:paddingBottom="@dimen/text_button_next_backpack_sign_up_02_padding_bottom"
+                android:stateListAnimator="@null"
+                android:text="@string/backpack_splash_button_log_in"
+                android:textAllCaps="false"
+                android:textColor="@color/background_button_sign_up_splash"
+                android:textSize="@dimen/backpack_splash_text_button_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.585"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_sign_up_splash_backpack"
+                tools:ignore="SpUsage,UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -87,6 +87,8 @@
     <dimen name="text_skip_guide_backpack_line_height">18dp</dimen>
     <dimen name="text_skip_guide_backpack_margin_top">37dp</dimen>
     <dimen name="btn_next_guide_backpack_margin_top">45dp</dimen>
+    <dimen name="view_pager_guide_backpack_height">0dp</dimen>
+    <dimen name="guide_indicator_backpack_height">10dp</dimen>
 
     <!--    Fragment_Guide_02-->
     <dimen name="button_join_guide_backpack_padding_end_and_start">34dp</dimen>

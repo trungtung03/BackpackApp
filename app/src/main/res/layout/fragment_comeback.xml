@@ -1,111 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/white">
 
-    <RelativeLayout
-        android:id="@+id/title_app_name_comeback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_app_name_comeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.218">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_backpack_comeback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:lineHeight="@dimen/title_comeback_backpack_line_height"
+                android:text="@string/title_comeback_backpack"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_comeback_backpack_size"
+                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/title_app_name_margin_start"
+                android:layout_toEndOf="@id/title_backpack_comeback"
+                android:src="@drawable/ellipse_backpack_splash_1" />
+
+        </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title_backpack_comeback"
+            android:id="@+id/tv_welcome_back_comeback_backpack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
-            android:lineHeight="@dimen/title_comeback_backpack_line_height"
-            android:text="@string/title_comeback_backpack"
+            android:lineHeight="@dimen/line_height_text_welcome_comeback"
+            android:text="@string/text_welcome_comeback_backpack"
             android:textColor="@color/black"
-            android:textSize="@dimen/title_comeback_backpack_size"
+            android:textSize="@dimen/size_text_welcome_comeback"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_app_name_comeback"
+            app:layout_constraintVertical_bias="0.398"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avt_comeback_backpack"
+            android:layout_width="@dimen/img_avt_comeback_backpack_width_and_height"
+            android:layout_height="@dimen/img_avt_comeback_backpack_width_and_height"
+            android:layout_marginTop="@dimen/avt_img_comeback_backpack"
+            android:src="@drawable/avatar_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_back_comeback_backpack" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name_account_comeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/name_accounts_comeback_backpack"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineHeight="@dimen/line_height_text_welcome_comeback"
+            android:text="@string/name_accounts_comeback_backpack"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_welcome_comeback"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_avt_comeback_backpack"
             tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_fingerprint_comeback_backpack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/title_app_name_margin_start"
-            android:layout_toEndOf="@id/title_backpack_comeback"
-            android:src="@drawable/ellipse_backpack_splash_1" />
+            android:src="@drawable/fingerprint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_account_comeback"
+            app:layout_constraintVertical_bias="0.232" />
 
-    </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_not_you_comeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="@dimen/line_height_not_you_comeback_backpack"
+            android:text="@string/text_not_you_comeback_backpack"
+            android:textColor="@color/text_not_you_color"
+            android:textSize="@dimen/text_size_not_you_comeback_backpack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_fingerprint_comeback_backpack"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_welcome_back_comeback_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:lineHeight="@dimen/line_height_text_welcome_comeback"
-        android:text="@string/text_welcome_comeback_backpack"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_text_welcome_comeback"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_app_name_comeback"
-        app:layout_constraintVertical_bias="0.398"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_avt_comeback_backpack"
-        android:layout_width="@dimen/img_avt_comeback_backpack_width_and_height"
-        android:layout_height="@dimen/img_avt_comeback_backpack_width_and_height"
-        android:layout_marginTop="@dimen/avt_img_comeback_backpack"
-        android:src="@drawable/avatar_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_back_comeback_backpack" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_name_account_comeback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/name_accounts_comeback_backpack"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineHeight="@dimen/line_height_text_welcome_comeback"
-        android:text="@string/name_accounts_comeback_backpack"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_text_welcome_comeback"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_avt_comeback_backpack"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_fingerprint_comeback_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/fingerprint"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_account_comeback"
-        app:layout_constraintVertical_bias="0.232" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_not_you_comeback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:lineHeight="@dimen/line_height_not_you_comeback_backpack"
-        android:text="@string/text_not_you_comeback_backpack"
-        android:textColor="@color/text_not_you_color"
-        android:textSize="@dimen/text_size_not_you_comeback_backpack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_fingerprint_comeback_backpack"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

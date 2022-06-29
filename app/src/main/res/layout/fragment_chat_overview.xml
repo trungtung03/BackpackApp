@@ -36,6 +36,7 @@
         android:layout_marginTop="@dimen/edt_search_member_chat_margin_top"
         android:layout_marginEnd="@dimen/edt_search_member_chat_margin_end"
         android:background="@android:color/transparent"
+        android:focusable="false"
         android:fontFamily="@font/poppins_medium"
         android:hint="@string/edt_search_member_chat_hint"
         android:lineHeight="@dimen/edt_search_member_chat_line_height"

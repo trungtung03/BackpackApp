@@ -1,10 +1,6 @@
 package com.example.backpackapp.fragment.location
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -14,28 +10,28 @@ import com.example.backpackapp.model.location.RequestsLocation
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterLocation.InvitesAdapter
 import com.example.backpackapp.adapter.adapterLocation.RequestsAdapter
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentLocationOverviewBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_location_overview.*
 import java.util.*
 
-class FragmentLocation : Fragment() {
+class FragmentLocation : BaseFragment<FragmentLocationOverviewBinding>() {
+    private lateinit var fragmentLocationOverviewBinding: FragmentLocationOverviewBinding
 
     private val user = Firebase.auth.currentUser
     private val listRequestsLocation = ArrayList<RequestsLocation>()
     private val listInvitesLocation = ArrayList<InvitesLocation>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_location_overview, container, false)
+    override fun initView(view: View) {
+        fragmentLocationOverviewBinding = FragmentLocationOverviewBinding.bind(view)
+        actionView()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        actionView()
+    override fun getBinding(): FragmentLocationOverviewBinding {
+        fragmentLocationOverviewBinding = FragmentLocationOverviewBinding.inflate(layoutInflater)
+        return fragmentLocationOverviewBinding
     }
 
     private fun actionView() {
@@ -56,7 +52,8 @@ class FragmentLocation : Fragment() {
             LinearLayoutManager.HORIZONTAL,
             false
         ).also { rcv_requests_location.layoutManager = it }
-        activity?.let { RequestsAdapter(it, listRequestsLocation) }.also { rcv_requests_location.adapter = it }
+        activity?.let { RequestsAdapter(it, listRequestsLocation) }
+            .also { rcv_requests_location.adapter = it }
 
         GridLayoutManager(activity, 1).also { rcv_invites_location.layoutManager = it }
         LinearLayoutManager(
@@ -64,7 +61,8 @@ class FragmentLocation : Fragment() {
             LinearLayoutManager.HORIZONTAL,
             false
         ).also { rcv_invites_location.layoutManager = it }
-        activity?.let { InvitesAdapter(it, listInvitesLocation) }.also { rcv_invites_location.adapter = it }
+        activity?.let { InvitesAdapter(it, listInvitesLocation) }
+            .also { rcv_invites_location.adapter = it }
 
         actionSeeAll()
 

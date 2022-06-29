@@ -4,21 +4,18 @@ package com.example.backpackapp.fragment.signUp
 
 import android.app.ProgressDialog
 import android.content.Intent
-import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.annotation.Nullable
-import androidx.fragment.app.Fragment
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.splash.SplashActivity
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentSignUpBinding
 import com.example.backpackapp.fragment.logIn.FragmentLogin
 import com.example.backpackapp.parameter.Parameters
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +25,9 @@ import java.util.regex.Pattern
 
 
 @Suppress("ControlFlowWithEmptyBody", "UNUSED_EXPRESSION", "DEPRECATION")
-class FragmentSignUp : Fragment(), View.OnClickListener {
+class FragmentSignUp : BaseFragment<FragmentSignUpBinding>(), View.OnClickListener {
+    private lateinit var fragmentSignUpBinding: FragmentSignUpBinding
+
     @Suppress("PropertyName")
     var isCheckClick: Boolean = false
     private lateinit var progressDialog: ProgressDialog
@@ -37,17 +36,14 @@ class FragmentSignUp : Fragment(), View.OnClickListener {
         var FULL_NAME: String? = null
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        @Nullable container: ViewGroup?,
-        @Nullable savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+    override fun initView(view: View) {
+        fragmentSignUpBinding = FragmentSignUpBinding.bind(view)
+        actionView()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        actionView()
+    override fun getBinding(): FragmentSignUpBinding {
+        fragmentSignUpBinding = FragmentSignUpBinding.inflate(layoutInflater)
+        return fragmentSignUpBinding
     }
 
     private fun actionView() {

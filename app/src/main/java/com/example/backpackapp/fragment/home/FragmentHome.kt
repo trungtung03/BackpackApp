@@ -1,46 +1,42 @@
 package com.example.backpackapp.fragment.home
 
-import android.content.Intent
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.activity.inApp.homePostFullSize.PostFullSizeActivity
 import com.example.backpackapp.adapter.adpterHome.ListDataAdapter
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentHomeOverviewBinding
 import com.example.backpackapp.model.home.ListData
 import com.example.backpackapp.model.home.popularDestinations.PopularDestinations
 import com.example.backpackapp.model.home.posts.Posts
 import com.example.backpackapp.parameter.GA
 import kotlinx.android.synthetic.main.fragment_home_overview.*
 
-class FragmentHome : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_home_overview, container, false)
-    }
+class FragmentHome : BaseFragment<FragmentHomeOverviewBinding>() {
+    private lateinit var fragmentHomeOverviewBinding: FragmentHomeOverviewBinding
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initView(view: View) {
+        fragmentHomeOverviewBinding = FragmentHomeOverviewBinding.bind(view)
         actionView()
     }
 
+    override fun getBinding(): FragmentHomeOverviewBinding {
+        fragmentHomeOverviewBinding = FragmentHomeOverviewBinding.inflate(layoutInflater)
+        return fragmentHomeOverviewBinding
+    }
+
     private fun actionView() {
+        fragmentHomeOverviewBinding.edtSearchCityHome.isFocusable = false
         LinearLayoutManager(activity).also { rcv_post_home.layoutManager = it }
         rcv_post_home.isFocusable = false
         val listDataAdapter = activity?.let {
             ListDataAdapter(it, getListData(), onClickJoin = {
                 Overview.moveFragment()
             }, onClickItem = {
-                startActivity(Intent(activity, PostFullSizeActivity::class.java))
-                (activity as AppCompatActivity).overridePendingTransition(
+                openActivity(PostFullSizeActivity::class.java)
+                animationSwitchActivity(
                     R.anim.slide_in_right,
                     R.anim.slide_in_left
                 )

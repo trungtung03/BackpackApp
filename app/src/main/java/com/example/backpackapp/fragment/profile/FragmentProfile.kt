@@ -4,17 +4,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -24,18 +19,20 @@ import com.example.backpackapp.model.profile.TravelPhotosProfile
 import com.example.backpackapp.activity.inApp.Overview
 import com.example.backpackapp.adapter.adapterProfile.PreviousTripAdapter
 import com.example.backpackapp.adapter.adapterProfile.TravelPhotosAdapter
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentProfileOverviewBinding
 import com.example.backpackapp.fragment.signUp.FragmentSignUp
 import com.example.backpackapp.parameter.Parameters
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_profile_overview.*
 import java.util.*
 
 
 @Suppress("ControlFlowWithEmptyBody", "SENSELESS_COMPARISON", "DEPRECATION", "SameParameterValue")
-class FragmentProfile : Fragment() {
+class FragmentProfile : BaseFragment<FragmentProfileOverviewBinding>() {
+    private lateinit var fragmentProfileOverviewBinding: FragmentProfileOverviewBinding
 
     private val listTravelPhoto = ArrayList<TravelPhotosProfile>()
     private val listPreviousTripProfile = ArrayList<PreviousTripProfile>()
@@ -55,7 +52,9 @@ class FragmentProfile : Fragment() {
                     (activity as AppCompatActivity).contentResolver,
                     uri
                 )
-                circle_image_avatar_profile_overview.setImageBitmap(bitmap)
+                fragmentProfileOverviewBinding.circleImageAvatarProfileOverview.setImageBitmap(
+                    bitmap
+                )
                 updateProfile()
             }
         }
@@ -87,17 +86,8 @@ class FragmentProfile : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile_overview, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun initView(view: View) {
+        fragmentProfileOverviewBinding = FragmentProfileOverviewBinding.bind(view)
         addList()
         rcv_photo_from_previous_trip.layoutManager = GridLayoutManager(activity, 1)
         rcv_photo_from_previous_trip.layoutManager =
@@ -112,6 +102,11 @@ class FragmentProfile : Fragment() {
             .also { rcv_trips_taken_in_past_months.adapter = it }
 
         actionView()
+    }
+
+    override fun getBinding(): FragmentProfileOverviewBinding {
+        fragmentProfileOverviewBinding = FragmentProfileOverviewBinding.inflate(layoutInflater)
+        return fragmentProfileOverviewBinding
     }
 
     private fun addList() {
@@ -212,22 +207,6 @@ class FragmentProfile : Fragment() {
                     Parameters.TITLE_INTENT_RESULT_LAUNCHER
                 )
             )
-        }
-    }
-
-    private fun createCustomToast(image: Int, message: String) {
-        val toast = Toast(activity)
-        toast.apply {
-            val layout = layoutInflater.inflate(
-                R.layout.custom_toast,
-                activity?.findViewById(R.id.constraint_layout_custom_toast)
-            ).apply {
-                img_warning_toast.setImageResource(image)
-            }
-            message.also { layout.tv_message_custom_toast.text = it }
-            Toast.LENGTH_SHORT.also { duration = it }
-            layout.also { view = it }
-            show()
         }
     }
 }

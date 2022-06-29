@@ -5,31 +5,38 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/avatar_user_like_posts"
-        android:layout_width="@dimen/avatar_user_like_posts_width"
-        android:layout_height="@dimen/avatar_user_like_posts_height"
-        android:src="@drawable/avatar_comeback_backpack" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/avatar_user02_like_posts"
-        android:layout_width="@dimen/avatar_user_like_posts_width"
-        android:layout_height="@dimen/avatar_user_like_posts_height"
-        android:layout_marginStart="@dimen/avatar_user02_like_posts_margin_start"
-        android:src="@drawable/avatar_info_profile" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_user_like_posts"
+            android:layout_width="@dimen/avatar_user_like_posts_width"
+            android:layout_height="@dimen/avatar_user_like_posts_height"
+            android:src="@drawable/avatar_comeback_backpack" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_amount_of_people_like_posts"
-        android:layout_width="@dimen/tv_amount_of_people_like_posts_width"
-        android:layout_height="@dimen/tv_amount_of_people_like_posts_height"
-        android:layout_marginStart="@dimen/tv_amount_of_people_like_posts_margin_start"
-        android:background="@drawable/background_button_join_guide"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center"
-        android:lineHeight="@dimen/tv_amount_of_people_like_posts_line_height"
-        android:text="@string/tv_amount_of_people_like_posts"
-        android:textColor="@color/black"
-        android:textSize="@dimen/tv_amount_of_people_like_posts_size"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_user02_like_posts"
+            android:layout_width="@dimen/avatar_user_like_posts_width"
+            android:layout_height="@dimen/avatar_user_like_posts_height"
+            android:layout_marginStart="@dimen/avatar_user02_like_posts_margin_start"
+            android:src="@drawable/avatar_info_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_amount_of_people_like_posts"
+            android:layout_width="@dimen/tv_amount_of_people_like_posts_width"
+            android:layout_height="@dimen/tv_amount_of_people_like_posts_height"
+            android:layout_marginStart="@dimen/tv_amount_of_people_like_posts_margin_start"
+            android:background="@drawable/background_button_join_guide"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:lineHeight="@dimen/tv_amount_of_people_like_posts_line_height"
+            android:text="@string/tv_amount_of_people_like_posts"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_amount_of_people_like_posts_size"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

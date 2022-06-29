@@ -1,16 +1,14 @@
 package com.example.backpackapp.fragment.signUp
 
 import android.content.Intent
-import android.os.Bundle
 import android.text.TextUtils
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.example.backpackapp.R
 import com.example.backpackapp.activity.splash.SplashActivity
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentSignUp02Binding
 import com.example.backpackapp.fragment.logIn.FragmentLogin
 import com.example.backpackapp.parameter.Parameters
 import kotlinx.android.synthetic.main.button_next.*
@@ -18,19 +16,18 @@ import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up_02.*
 
 @Suppress("DEPRECATION")
-class FragmentSignUp02 : Fragment() {
+class FragmentSignUp02 : BaseFragment<FragmentSignUp02Binding>() {
+    private lateinit var fragmentSignUp02Binding: FragmentSignUp02Binding
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_sign_up_02, container, false)
+
+    override fun initView(view: View) {
+        fragmentSignUp02Binding = FragmentSignUp02Binding.bind(view)
+        actionView()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        actionView()
+    override fun getBinding(): FragmentSignUp02Binding {
+        fragmentSignUp02Binding = FragmentSignUp02Binding.inflate(layoutInflater)
+        return fragmentSignUp02Binding
     }
 
     private fun actionView() {

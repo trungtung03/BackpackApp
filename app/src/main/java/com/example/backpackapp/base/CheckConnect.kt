@@ -1,9 +1,10 @@
-package com.example.backpackapp.base.checkConnect
+package com.example.backpackapp.base
 
 import android.content.Context
 import android.net.ConnectivityManager
 
 
+@Suppress("DEPRECATION")
 class CheckConnect {
     companion object {
         fun checkConnection(context: Context): Boolean {

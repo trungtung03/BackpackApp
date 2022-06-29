@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/white">
 
-    <include
-        android:id="@+id/round_back_log_in_recover"
-        layout="@layout/round_back_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_title_log_in_recover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_sign_up_02_backpack_margin_start"
-        android:layout_marginTop="@dimen/text_sign_up_02_backpack_margin_top"
-        android:layout_marginEnd="@dimen/text_sign_up_02_backpack_margin_end"
-        android:fontFamily="@font/poppins_extrabold"
-        android:lineHeight="@dimen/text_line_height_sign_up_2_backpack"
-        android:text="@string/text_backpack_log_in_recover"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_sign_up_02_backpack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpUsage,UnusedAttribute" />
-
-    <View
-        android:id="@+id/view_log_in_recover_backpack"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_view_sign_up_02_backpack"
-        android:layout_marginStart="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
-        android:layout_marginTop="@dimen/view_margin_top_log_in_recover"
-        android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
-        android:background="@color/text_backpack_sign_up_to_log_in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_log_in_recover" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
-        android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/poppins"
-        android:hint="@string/hint_edt_log_in_recover_backpack"
-        android:lineHeight="@dimen/hint_line_height_login_recover_backpack"
-        android:textColor="@color/black"
-        android:textColorHint="@color/text_backpack_sign_up_to_log_in"
-        android:textSize="@dimen/text_size_login_recover_backpack"
-        app:layout_constraintBottom_toTopOf="@+id/view_log_in_recover_backpack"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
-        tools:layout_editor_absoluteX="44dp" />
+        <include
+            android:id="@+id/round_back_log_in_recover"
+            layout="@layout/round_back_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        android:id="@+id/btn_next_login_recover"
-        layout="@layout/button_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_next_sign_up_02_backpack_margin_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_log_in_recover_backpack" />
+        <TextView
+            android:id="@+id/tv_title_log_in_recover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_sign_up_02_backpack_margin_start"
+            android:layout_marginTop="@dimen/text_sign_up_02_backpack_margin_top"
+            android:layout_marginEnd="@dimen/text_sign_up_02_backpack_margin_end"
+            android:fontFamily="@font/poppins_extrabold"
+            android:lineHeight="@dimen/text_line_height_sign_up_2_backpack"
+            android:text="@string/text_backpack_log_in_recover"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_sign_up_02_backpack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage,UnusedAttribute" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/view_log_in_recover_backpack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_view_sign_up_02_backpack"
+            android:layout_marginStart="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+            android:layout_marginTop="@dimen/view_margin_top_log_in_recover"
+            android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+            android:background="@color/text_backpack_sign_up_to_log_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_log_in_recover" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+            android:layout_marginEnd="@dimen/edt_number_phone_sign_up_02_backpack_margin_end_and_start"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/hint_edt_log_in_recover_backpack"
+            android:lineHeight="@dimen/hint_line_height_login_recover_backpack"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_backpack_sign_up_to_log_in"
+            android:textSize="@dimen/text_size_login_recover_backpack"
+            app:layout_constraintBottom_toTopOf="@+id/view_log_in_recover_backpack"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
+            tools:layout_editor_absoluteX="44dp" />
+
+        <include
+            android:id="@+id/btn_next_login_recover"
+            layout="@layout/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_next_sign_up_02_backpack_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_log_in_recover_backpack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

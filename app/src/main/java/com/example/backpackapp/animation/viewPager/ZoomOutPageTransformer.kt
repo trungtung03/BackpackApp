@@ -1,4 +1,4 @@
-package com.example.backpackapp.base.viewPager
+package com.example.backpackapp.animation.viewPager
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager

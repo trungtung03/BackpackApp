@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image_guide_03_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/image_guide_02"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_join_guide_03_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_button_join_guide"
-        android:fontFamily="@font/poppins_bold"
-        android:lineHeight="@dimen/text_line_height_guide_02_backpack"
-        android:paddingStart="@dimen/button_join_guide_backpack_padding_end_and_start"
-        android:paddingTop="@dimen/button_join_guide_backpack_padding_top"
-        android:paddingEnd="@dimen/button_join_guide_backpack_padding_end_and_start"
-        android:paddingBottom="@dimen/button_join_guide_backpack_padding_bottom"
-        android:stateListAnimator="@null"
-        android:text="@string/text_button_guide_02_backpack"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_guide_02_backpack"
-        app:layout_constraintBottom_toBottomOf="@id/image_guide_03_backpack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_guide_03_backpack"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
-        tools:layout_editor_absoluteX="184dp" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_title_guide_03_backpack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/text_guide_backpack_margin_top"
-        android:fontFamily="@font/poppins_extrabold"
-        android:lineHeight="@dimen/text_guide_backpack_line_height"
-        android:text="@string/text_title_guide_02_backpack"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_guide_backpack_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_join_guide_03_backpack"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_message_guide_03_backpack"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_guide_message_backpack_margin_end_and_start"
-        android:layout_marginTop="@dimen/text_guide_message_backpack_margin_top"
-        android:layout_marginEnd="@dimen/text_guide_message_backpack_margin_end_and_start"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
-        android:lineHeight="@dimen/text_guide_message_backpack_line_height"
-        android:text="@string/text_message_guide_02_backpack"
-        android:textColor="@color/text_backpack_sign_up_to_log_in"
-        android:textSize="@dimen/text_guide_message_backpack_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_guide_03_backpack"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_guide_03_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_guide_02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_join_guide_03_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button_join_guide"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="@dimen/text_line_height_guide_02_backpack"
+            android:paddingStart="@dimen/button_join_guide_backpack_padding_end_and_start"
+            android:paddingTop="@dimen/button_join_guide_backpack_padding_top"
+            android:paddingEnd="@dimen/button_join_guide_backpack_padding_end_and_start"
+            android:paddingBottom="@dimen/button_join_guide_backpack_padding_bottom"
+            android:stateListAnimator="@null"
+            android:text="@string/text_button_guide_02_backpack"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_guide_02_backpack"
+            app:layout_constraintBottom_toBottomOf="@id/image_guide_03_backpack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_guide_03_backpack"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
+            tools:layout_editor_absoluteX="184dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_guide_03_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_guide_backpack_margin_top"
+            android:fontFamily="@font/poppins_extrabold"
+            android:lineHeight="@dimen/text_guide_backpack_line_height"
+            android:text="@string/text_title_guide_02_backpack"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_guide_backpack_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_join_guide_03_backpack"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_message_guide_03_backpack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_guide_message_backpack_margin_end_and_start"
+            android:layout_marginTop="@dimen/text_guide_message_backpack_margin_top"
+            android:layout_marginEnd="@dimen/text_guide_message_backpack_margin_end_and_start"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:lineHeight="@dimen/text_guide_message_backpack_line_height"
+            android:text="@string/text_message_guide_02_backpack"
+            android:textColor="@color/text_backpack_sign_up_to_log_in"
+            android:textSize="@dimen/text_guide_message_backpack_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_guide_03_backpack"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -2,16 +2,16 @@
 
 package com.example.backpackapp.activity.inApp
 
-import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.backpackapp.R
 import com.example.backpackapp.adapter.ViewPagerOverviewAdapter
-import com.example.backpackapp.base.activity.Activity
-import com.example.backpackapp.base.viewPager.ZoomOutPageTransformer
+import com.example.backpackapp.base.BaseActivity
+import com.example.backpackapp.animation.viewPager.ZoomOutPageTransformer
+import com.example.backpackapp.databinding.ActivityOverviewBinding
 import com.example.backpackapp.parameter.GA
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -20,7 +20,8 @@ var layoutContainFragment: ViewPager? = null
 var bottomNavigation: BottomNavigationView? = null
 
 @Suppress("DEPRECATION", "ControlFlowWithEmptyBody", "SameParameterValue")
-class Overview : AppCompatActivity() {
+class Overview : BaseActivity() {
+    private lateinit var binding: ActivityOverviewBinding
 
     companion object {
         fun roundBack() {
@@ -34,14 +35,17 @@ class Overview : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_overview)
-        Activity.fullScreen(window)
+    override fun setFlag(): Unit = fullScreen()
+
+    override fun setLayout(): View = binding.root
+
+    override fun initView() {
+        binding = ActivityOverviewBinding.inflate(layoutInflater)
+
         GA.COUNT_CLICK = 0
 
-        bottomNavigation = findViewById(R.id.bottom_navigation_overview_activity)
-        layoutContainFragment = findViewById(R.id.layout_contain_fragment_overview_backpack)
+        bottomNavigation = binding.bottomNavigationOverviewActivity
+        layoutContainFragment = binding.layoutContainFragmentOverviewBackpack
 
         layoutContainFragment?.setPageTransformer(true, ZoomOutPageTransformer())
         layoutContainFragment?.adapter = ViewPagerOverviewAdapter(

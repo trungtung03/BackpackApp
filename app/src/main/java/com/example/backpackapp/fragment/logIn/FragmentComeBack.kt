@@ -3,41 +3,35 @@ package com.example.backpackapp.fragment.logIn
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
-import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.backpackapp.R
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentComebackBinding
 import com.example.backpackapp.fragment.guide.FragmentGuide
 import com.example.backpackapp.parameter.Parameters
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.custom_toast.view.*
 import kotlinx.android.synthetic.main.fragment_comeback.*
 
 @Suppress("SameParameterValue", "DEPRECATION")
-class FragmentComeBack : Fragment() {
+class FragmentComeBack : BaseFragment<FragmentComebackBinding>() {
+    private lateinit var fragmentComebackBinding: FragmentComebackBinding
 
     private lateinit var biometricPrompt: BiometricPrompt
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_comeback, container, false)
+    private fun dialogMetric(): BiometricPrompt.PromptInfo.Builder {
+        return BiometricPrompt.PromptInfo.Builder().setTitle(Parameters.BIOMETRIC_TITLE)
+            .setSubtitle(Parameters.BIOMETRIC_LOGIN_SUBTITLE)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initView(view: View) {
+        fragmentComebackBinding = FragmentComebackBinding.bind(view)
         checkBioMetricSupport()
         activity?.let {
             val executor = ContextCompat.getMainExecutor(it)
@@ -74,9 +68,9 @@ class FragmentComeBack : Fragment() {
         }
     }
 
-    private fun dialogMetric(): BiometricPrompt.PromptInfo.Builder {
-        return BiometricPrompt.PromptInfo.Builder().setTitle(Parameters.BIOMETRIC_TITLE)
-            .setSubtitle(Parameters.BIOMETRIC_LOGIN_SUBTITLE)
+    override fun getBinding(): FragmentComebackBinding {
+        fragmentComebackBinding = FragmentComebackBinding.inflate(layoutInflater)
+        return fragmentComebackBinding
     }
 
     @SuppressLint("SwitchIntDef")
@@ -122,21 +116,6 @@ class FragmentComeBack : Fragment() {
             startActivity(intent)
         } else {
             return
-        }
-    }
-
-    fun createCustomToast(image: Int, message: String) {
-        val toast = Toast(activity)
-        toast.apply {
-            val layout = layoutInflater.inflate(
-                R.layout.custom_toast,
-                activity?.findViewById(R.id.constraint_layout_custom_toast)
-            )
-            layout.img_warning_toast.setImageResource(image)
-            layout.tv_message_custom_toast.text = message
-            duration = Toast.LENGTH_SHORT
-            view = layout
-            show()
         }
     }
 }

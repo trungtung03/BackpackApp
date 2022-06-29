@@ -1,308 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".activity.inApp.homePostFullSize.PostFullSizeActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image_post_full_size"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/image_post_full_size_height"
-        android:scaleType="fitXY"
-        android:src="@drawable/oliver_sjostrom_post_full_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/round_back_post_full_size"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/round_back_post_full_size_margin_left"
-        android:layout_marginTop="@dimen/round_back_post_full_size_margin_top"
-        android:src="@drawable/round_arrow_back"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlHardcoded" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/number_of_turns_post_full_size"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/number_of_turns_item_rcv_post_home_height"
-        android:layout_marginStart="@dimen/number_of_turns_post_full_size_margin_start"
-        android:layout_marginTop="@dimen/number_of_turns_post_full_size_margin_top"
-        android:background="@drawable/text_overview"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_vertical"
-        android:lineHeight="@dimen/number_of_turns_item_rcv_post_home_line_height"
-        android:paddingStart="@dimen/number_of_turns_item_rcv_post_home_padding_start"
-        android:paddingEnd="@dimen/number_of_turns_item_rcv_post_home_padding_end"
-        android:text="@string/number_of_turns_item_rcv_post_home"
-        android:textColor="@color/black"
-        android:textSize="@dimen/number_of_turns_item_rcv_post_home_size"
-        app:layout_constraintStart_toEndOf="@id/round_back_post_full_size"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_day_trip_post_full_size"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/tv_day_trip_item_rcv_post_home_margin_start"
-        android:layout_marginTop="@dimen/tv_day_trip_item_rcv_post_home_margin_top"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/poppins_bold"
-        android:lineHeight="@dimen/tv_day_trip_item_rcv_post_home_line_height"
-        android:text="@string/tv_day_trip_item_rcv_post_home"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/tv_day_trip_item_rcv_post_home_size"
-        app:layout_constraintStart_toEndOf="@id/number_of_turns_post_full_size"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
-
-    <ScrollView
-        android:id="@+id/scroll_view_contains_article_info"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/scroll_view_contains_article_info_height"
-        android:layout_marginTop="@dimen/scroll_view_contains_article_info_margin_top"
-        android:background="@drawable/custom_scroll_view_post_full_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_post_full_size">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_post_full_size"
             android:layout_width="match_parent"
+            android:layout_height="@dimen/image_post_full_size_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/oliver_sjostrom_post_full_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/round_back_post_full_size"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_scroll_view_post_full_size">
+            android:layout_marginStart="@dimen/round_back_post_full_size_margin_left"
+            android:layout_marginTop="@dimen/round_back_post_full_size_margin_top"
+            android:src="@drawable/round_arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/image_avatar_post_full_size"
-                android:layout_width="@dimen/image_avatar_post_full_size_width"
-                android:layout_height="@dimen/image_avatar_post_full_size_height"
-                android:layout_marginStart="@dimen/image_avatar_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/image_avatar_post_full_size_margin_top"
-                android:src="@drawable/avatar_info_profile"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/circleImageView" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number_of_turns_post_full_size"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/number_of_turns_item_rcv_post_home_height"
+            android:layout_marginStart="@dimen/number_of_turns_post_full_size_margin_start"
+            android:layout_marginTop="@dimen/number_of_turns_post_full_size_margin_top"
+            android:background="@drawable/text_overview"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:lineHeight="@dimen/number_of_turns_item_rcv_post_home_line_height"
+            android:paddingStart="@dimen/number_of_turns_item_rcv_post_home_padding_start"
+            android:paddingEnd="@dimen/number_of_turns_item_rcv_post_home_padding_end"
+            android:text="@string/number_of_turns_item_rcv_post_home"
+            android:textColor="@color/black"
+            android:textSize="@dimen/number_of_turns_item_rcv_post_home_size"
+            app:layout_constraintStart_toEndOf="@id/round_back_post_full_size"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_name_account_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/tv_name_account_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/tv_name_account_post_full_size_margin_top"
-                android:fontFamily="@font/poppins_semibold"
-                android:lineHeight="@dimen/tv_name_account_post_full_size_line_height"
-                android:text="@string/tv_name_account_post_full_size"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="@dimen/tv_name_account_post_full_size_size"
-                app:layout_constraintStart_toEndOf="@id/image_avatar_post_full_size"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_day_trip_post_full_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_day_trip_item_rcv_post_home_margin_start"
+            android:layout_marginTop="@dimen/tv_day_trip_item_rcv_post_home_margin_top"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="@dimen/tv_day_trip_item_rcv_post_home_line_height"
+            android:text="@string/tv_day_trip_item_rcv_post_home"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_day_trip_item_rcv_post_home_size"
+            app:layout_constraintStart_toEndOf="@id/number_of_turns_post_full_size"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_time_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/tv_time_post_full_size_margin_top"
-                android:layout_marginEnd="@dimen/tv_time_post_full_size_margin_end"
-                android:fontFamily="@font/poppins"
-                android:lineHeight="@dimen/tv_time_post_full_size_line_height"
-                android:text="@string/tv_time_post_full_size"
-                android:textColor="@color/text_backpack_sign_up_to_log_in"
-                android:textSize="@dimen/tv_time_post_full_size_size"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
+        <ScrollView
+            android:id="@+id/scroll_view_contains_article_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scroll_view_contains_article_info_height"
+            android:layout_marginTop="@dimen/scroll_view_contains_article_info_margin_top"
+            android:background="@drawable/custom_scroll_view_post_full_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_post_full_size">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_describe_post_full_size"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/tv_describe_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/tv_describe_post_full_size_margin_top"
-                android:layout_marginEnd="@dimen/tv_describe_post_full_size_margin_end"
-                android:text="@string/tv_describe_post_full_size"
-                android:textColor="@color/text_not_you_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/image_avatar_post_full_size"
-                tools:ignore="HardcodedText" />
+                android:background="@drawable/custom_scroll_view_post_full_size">
 
-            <RelativeLayout
-                android:id="@+id/layout_contains_item_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/layout_contains_item_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/layout_contains_item_post_full_size_margin_top"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_describe_post_full_size">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_avatar_post_full_size"
+                    android:layout_width="@dimen/image_avatar_post_full_size_width"
+                    android:layout_height="@dimen/image_avatar_post_full_size_height"
+                    android:layout_marginStart="@dimen/image_avatar_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/image_avatar_post_full_size_margin_top"
+                    android:src="@drawable/avatar_info_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circleImageView" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_next_trip_post_full_size"
+                    android:id="@+id/tv_name_account_post_full_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/poppins_bold"
-                    android:lineHeight="@dimen/tv_next_trip_item_rcv_post_home_line_height"
-                    android:text="@string/tv_next_trip_item_rcv_post_home"
-                    android:textSize="@dimen/tv_next_trip_item_rcv_post_home_size"
+                    android:layout_marginStart="@dimen/tv_name_account_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/tv_name_account_post_full_size_margin_top"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="@dimen/tv_name_account_post_full_size_line_height"
+                    android:text="@string/tv_name_account_post_full_size"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_name_account_post_full_size_size"
+                    app:layout_constraintStart_toEndOf="@id/image_avatar_post_full_size"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_vehicle_post_full_size"
-                    android:layout_width="@dimen/image_vehicle_item_rcv_post_home_width"
-                    android:layout_height="@dimen/image_vehicle_item_rcv_post_home_height"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="@dimen/image_vehicle_item_rcv_post_home_margin_start"
-                    android:layout_toEndOf="@id/tv_next_trip_post_full_size"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/round_airplanemode_black" />
-
-                <com.hbb20.CountryCodePicker
-                    android:id="@+id/text_from_country_post_full_size"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_time_post_full_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/image_vehicle_post_full_size"
-                    app:ccp_contentColor="@color/black"
-                    app:ccp_defaultLanguage="VIETNAMESE"
-                    app:ccp_defaultNameCode="US"
-                    app:ccp_showArrow="false"
-                    app:ccp_showFlag="false"
-                    app:ccp_showFullName="true"
-                    app:ccp_showNameCode="false"
-                    app:ccp_showPhoneCode="false"
-                    app:ccp_textSize="@dimen/text_to_country_overview_backpack_size" />
+                    android:layout_marginTop="@dimen/tv_time_post_full_size_margin_top"
+                    android:layout_marginEnd="@dimen/tv_time_post_full_size_margin_end"
+                    android:fontFamily="@font/poppins"
+                    android:lineHeight="@dimen/tv_time_post_full_size_line_height"
+                    android:text="@string/tv_time_post_full_size"
+                    android:textColor="@color/text_backpack_sign_up_to_log_in"
+                    android:textSize="@dimen/tv_time_post_full_size_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-                <LinearLayout
-                    android:id="@+id/layout_contain_ellipse_post_full_size"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_describe_post_full_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tv_describe_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/tv_describe_post_full_size_margin_top"
+                    android:layout_marginEnd="@dimen/tv_describe_post_full_size_margin_end"
+                    android:text="@string/tv_describe_post_full_size"
+                    android:textColor="@color/text_not_you_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_avatar_post_full_size"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_contains_item_post_full_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/text_from_country_post_full_size"
-                    android:orientation="horizontal"
-                    android:weightSum="9"
-                    tools:ignore="UselessLeaf">
+                    android:layout_marginStart="@dimen/layout_contains_item_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/layout_contains_item_post_full_size_margin_top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_describe_post_full_size">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_next_trip_post_full_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_bold"
+                        android:lineHeight="@dimen/tv_next_trip_item_rcv_post_home_line_height"
+                        android:text="@string/tv_next_trip_item_rcv_post_home"
+                        android:textSize="@dimen/tv_next_trip_item_rcv_post_home_size"
+                        tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/ellipse_width"
+                        android:id="@+id/image_vehicle_post_full_size"
+                        android:layout_width="@dimen/image_vehicle_item_rcv_post_home_width"
+                        android:layout_height="@dimen/image_vehicle_item_rcv_post_home_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/image_vehicle_item_rcv_post_home_margin_start"
+                        android:layout_toEndOf="@id/tv_next_trip_post_full_size"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/round_airplanemode_black" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/text_from_country_post_full_size"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:src="@drawable/ellipse_4" />
+                        android:layout_toEndOf="@id/image_vehicle_post_full_size"
+                        app:ccp_contentColor="@color/black"
+                        app:ccp_defaultLanguage="VIETNAMESE"
+                        app:ccp_defaultNameCode="US"
+                        app:ccp_showArrow="false"
+                        app:ccp_showFlag="false"
+                        app:ccp_showFullName="true"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textSize="@dimen/text_to_country_overview_backpack_size" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/ellipse_width"
+                    <LinearLayout
+                        android:id="@+id/layout_contain_ellipse_post_full_size"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/ellipse_black_margin_start"
-                        android:layout_marginEnd="@dimen/ellipse_black_margin_end"
-                        android:layout_weight="3"
-                        android:src="@drawable/ellipse_4" />
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/text_from_country_post_full_size"
+                        android:orientation="horizontal"
+                        android:weightSum="9"
+                        tools:ignore="UselessLeaf">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/ellipse_width"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/ellipse_width"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:src="@drawable/ellipse_4" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/ellipse_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ellipse_black_margin_start"
+                            android:layout_marginEnd="@dimen/ellipse_black_margin_end"
+                            android:layout_weight="3"
+                            android:src="@drawable/ellipse_4" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/ellipse_width"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:src="@drawable/ellipse_4" />
+
+                    </LinearLayout>
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/text_to_country_post_full_size"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:src="@drawable/ellipse_4" />
+                        android:layout_toEndOf="@id/layout_contain_ellipse_post_full_size"
+                        app:ccp_contentColor="@color/black"
+                        app:ccp_defaultLanguage="VIETNAMESE"
+                        app:ccp_defaultNameCode="VN"
+                        app:ccp_showArrow="false"
+                        app:ccp_showFlag="false"
+                        app:ccp_showFullName="true"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textSize="@dimen/text_to_country_overview_backpack_size" />
 
-                </LinearLayout>
+                </RelativeLayout>
 
-                <com.hbb20.CountryCodePicker
-                    android:id="@+id/text_to_country_post_full_size"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_user_like_post_full_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/layout_contain_ellipse_post_full_size"
-                    app:ccp_contentColor="@color/black"
-                    app:ccp_defaultLanguage="VIETNAMESE"
-                    app:ccp_defaultNameCode="VN"
-                    app:ccp_showArrow="false"
-                    app:ccp_showFlag="false"
-                    app:ccp_showFullName="true"
-                    app:ccp_showNameCode="false"
-                    app:ccp_showPhoneCode="false"
-                    app:ccp_textSize="@dimen/text_to_country_overview_backpack_size" />
+                    android:layout_marginStart="@dimen/rcv_user_like_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/rcv_user_like_post_full_size_margin_top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_contains_item_post_full_size" />
 
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_user_like_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/rcv_user_like_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/rcv_user_like_post_full_size_margin_top"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_contains_item_post_full_size" />
-
-            <View
-                android:id="@+id/view_post_full_size"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/view_item_rcv_post_home_height"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16.5dp"
-                android:layout_marginEnd="32dp"
-                android:background="@color/background_view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rcv_user_like_post_full_size" />
+                <View
+                    android:id="@+id/view_post_full_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_item_rcv_post_home_height"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16.5dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@color/background_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_user_like_post_full_size" />
 
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/image_btn_heart_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/image_btn_heart_post_full_size_margin_start"
-                android:layout_marginTop="@dimen/image_btn_heart_item_post_home_margin_top"
-                android:layout_marginBottom="@dimen/image_btn_heart_item_post_home_margin_bottom"
-                android:background="@android:color/transparent"
-                android:src="@drawable/heart_disable_item_rcv_posts_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/image_btn_heart_post_full_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/image_btn_heart_post_full_size_margin_start"
+                    android:layout_marginTop="@dimen/image_btn_heart_item_post_home_margin_top"
+                    android:layout_marginBottom="@dimen/image_btn_heart_item_post_home_margin_bottom"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/heart_disable_item_rcv_posts_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/image_btn_share_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/image_btn_share_item_post_home_margin_start"
-                android:layout_marginTop="@dimen/image_btn_share_item_post_home_margin_top"
-                android:layout_marginBottom="@dimen/image_btn_share_item_post_home_margin_bottom"
-                android:background="@android:color/transparent"
-                android:src="@drawable/share_item_rcv_post_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/image_btn_heart_post_full_size"
-                app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/image_btn_share_post_full_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/image_btn_share_item_post_home_margin_start"
+                    android:layout_marginTop="@dimen/image_btn_share_item_post_home_margin_top"
+                    android:layout_marginBottom="@dimen/image_btn_share_item_post_home_margin_bottom"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/share_item_rcv_post_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_btn_heart_post_full_size"
+                    app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_service_post_full_size"
-                android:layout_width="@dimen/rcv_service_item_rcv_post_home_width"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/rcv_service_item_rcv_post_home_margin_start"
-                android:layout_marginTop="@dimen/rcv_service_item_rcv_post_home_margin_top"
-                android:layout_marginEnd="@dimen/rcv_service_item_rcv_post_home_margin_end"
-                android:layout_marginBottom="@dimen/rcv_service_item_rcv_post_home_margin_bottom"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/add_to_bookmark_disable_post_full_size"
-                app:layout_constraintStart_toEndOf="@id/image_btn_share_post_full_size"
-                app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_service_post_full_size"
+                    android:layout_width="@dimen/rcv_service_item_rcv_post_home_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/rcv_service_item_rcv_post_home_margin_start"
+                    android:layout_marginTop="@dimen/rcv_service_item_rcv_post_home_margin_top"
+                    android:layout_marginEnd="@dimen/rcv_service_item_rcv_post_home_margin_end"
+                    android:layout_marginBottom="@dimen/rcv_service_item_rcv_post_home_margin_bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/add_to_bookmark_disable_post_full_size"
+                    app:layout_constraintStart_toEndOf="@id/image_btn_share_post_full_size"
+                    app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/add_to_bookmark_disable_post_full_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/add_to_bookmark_disable_item_rcv_posts_home_margin_top"
-                android:layout_marginEnd="@dimen/add_to_bookmark_disable_post_full_size_margin_end"
-                android:layout_marginBottom="@dimen/add_to_bookmark_disable_item_rcv_posts_home_margin_bottom"
-                android:background="@android:color/transparent"
-                android:src="@drawable/add_to_bookmark_disable_item_rcv_posts_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/add_to_bookmark_disable_post_full_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/add_to_bookmark_disable_item_rcv_posts_home_margin_top"
+                    android:layout_marginEnd="@dimen/add_to_bookmark_disable_post_full_size_margin_end"
+                    android:layout_marginBottom="@dimen/add_to_bookmark_disable_item_rcv_posts_home_margin_bottom"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_to_bookmark_disable_item_rcv_posts_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_post_full_size" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+        </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

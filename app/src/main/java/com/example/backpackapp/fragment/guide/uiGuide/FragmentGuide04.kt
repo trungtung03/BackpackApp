@@ -1,22 +1,18 @@
 package com.example.backpackapp.fragment.guide.uiGuide
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.backpackapp.R
+import com.example.backpackapp.base.BaseFragment
+import com.example.backpackapp.databinding.FragmentGuide04Binding
 
-class FragmentGuide04: Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_guide_04, container, false)
+class FragmentGuide04 : BaseFragment<FragmentGuide04Binding>() {
+    private lateinit var fragmentGuide04Binding: FragmentGuide04Binding
+
+    override fun initView(view: View) {
+        fragmentGuide04Binding = FragmentGuide04Binding.bind(view)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun getBinding(): FragmentGuide04Binding {
+        fragmentGuide04Binding = FragmentGuide04Binding.inflate(layoutInflater)
+        return fragmentGuide04Binding
     }
 }
