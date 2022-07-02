@@ -1,4 +1,4 @@
-package com.example.backpackapp.view.fragment.guide.login
+package com.example.backpackapp.view.fragment.login
 
 import android.annotation.SuppressLint
 import android.content.Intent

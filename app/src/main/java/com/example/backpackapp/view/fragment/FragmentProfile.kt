@@ -1,4 +1,4 @@
-package com.example.backpackapp.view.fragment.guide
+package com.example.backpackapp.view.fragment
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -21,7 +21,7 @@ import com.example.backpackapp.controller.adapterProfile.PreviousTripAdapter
 import com.example.backpackapp.controller.adapterProfile.TravelPhotosAdapter
 import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentProfileOverviewBinding
-import com.example.backpackapp.view.fragment.guide.signup.FragmentSignUp
+import com.example.backpackapp.view.fragment.signup.FragmentSignUp
 import com.example.backpackapp.util.Parameters
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest

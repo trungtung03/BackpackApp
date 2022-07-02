@@ -11,9 +11,9 @@ import com.example.backpackapp.R
 import com.example.backpackapp.ui.base.BaseActivity
 import com.example.backpackapp.ui.base.CheckConnect
 import com.example.backpackapp.databinding.SplashActivityBinding
-import com.example.backpackapp.view.fragment.guide.login.FragmentComeBack
-import com.example.backpackapp.view.fragment.guide.login.FragmentLogin
-import com.example.backpackapp.view.fragment.guide.signup.FragmentSignUp
+import com.example.backpackapp.view.fragment.login.FragmentComeBack
+import com.example.backpackapp.view.fragment.login.FragmentLogin
+import com.example.backpackapp.view.fragment.signup.FragmentSignUp
 import com.example.backpackapp.util.Parameters
 import com.google.firebase.auth.FirebaseAuth
 

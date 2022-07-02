@@ -1,4 +1,4 @@
-package com.example.backpackapp.view.fragment.guide
+package com.example.backpackapp.view.fragment
 
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager

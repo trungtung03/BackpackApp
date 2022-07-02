@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.backpackapp.view.fragment.guide.login
+package com.example.backpackapp.view.fragment.login
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -14,7 +14,7 @@ import com.example.backpackapp.view.activity.splash.SplashActivity
 import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentLogInBinding
 import com.example.backpackapp.view.fragment.guide.FragmentGuide
-import com.example.backpackapp.view.fragment.guide.signup.FragmentSignUp
+import com.example.backpackapp.view.fragment.signup.FragmentSignUp
 import com.example.backpackapp.util.Parameters
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

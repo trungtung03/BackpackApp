@@ -1,4 +1,4 @@
-package com.example.backpackapp.view.fragment.guide.signup
+package com.example.backpackapp.view.fragment.signup
 
 import android.content.Intent
 import android.text.TextUtils
@@ -9,7 +9,7 @@ import com.example.backpackapp.R
 import com.example.backpackapp.view.activity.splash.SplashActivity
 import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentSignUp02Binding
-import com.example.backpackapp.view.fragment.guide.login.FragmentLogin
+import com.example.backpackapp.view.fragment.login.FragmentLogin
 import com.example.backpackapp.util.Parameters
 import kotlinx.android.synthetic.main.button_next.*
 import kotlinx.android.synthetic.main.custom_toast.view.*
