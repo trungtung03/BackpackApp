@@ -17,13 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
         <activity
-            android:name=".activity.inApp.homePostFullSize.PostFullSizeActivity"
+            android:name="com.example.backpackapp.view.activity.inApp.homePostFullSize.PostFullSizeActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.inApp.Overview"
+            android:name="com.example.backpackapp.view.activity.inApp.Overview"
             android:exported="false" />
         <activity
-            android:name=".activity.SplashSpeed"
+            android:name="com.example.backpackapp.view.activity.SplashSpeed"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -38,7 +38,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".activity.splash.SplashActivity"
+            android:name="com.example.backpackapp.view.activity.splash.SplashActivity"
             android:exported="false" />
     </application>
 
