@@ -19,14 +19,18 @@ class ListDataAdapter(
     val context: Context,
     private val listData: ArrayList<ListData>,
     private val onClickJoin: () -> Unit,
-    private val onClickItem: () -> Unit
+    private val onClickItem: () -> Unit,
 ) : RecyclerView.Adapter<ListDataAdapter.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return listData[position].type!!
     }
 
-    class ViewHolder(itemView: View, private val onClickJoin: () -> Unit, private val onClickItem: () -> Unit) :
+    class ViewHolder(
+        itemView: View,
+        private val onClickJoin: () -> Unit,
+        private val onClickItem: () -> Unit,
+    ) :
         RecyclerView.ViewHolder(itemView) {
         fun bindViewHolder(
             context: Context,
@@ -41,7 +45,14 @@ class ListDataAdapter(
                         false
                     ).also { itemView.rcv_list_data.layoutManager = it }
                     itemView.rcv_list_data.adapter =
-                        listData[position].listPosts?.let { PostsAdapter(context, it, onClickJoin, onClickItem) }
+                        listData[position].listPosts?.let {
+                            PostsAdapter(
+                                context,
+                                it,
+                                onClickJoin,
+                                onClickItem
+                            )
+                        }
                 }
                 GA.TYPE_POPULAR_DESTINATIONS -> {
                     GridLayoutManager(context, 1).also { itemView.rcv_list_data.layoutManager = it }
@@ -65,7 +76,9 @@ class ListDataAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             itemView = LayoutInflater.from(context)
-                .inflate(R.layout.item_rcv_list_data, parent, false), onClickJoin, onClickItem
+                .inflate(R.layout.item_rcv_list_data, parent, false),
+            onClickJoin,
+            onClickItem
         )
     }
 

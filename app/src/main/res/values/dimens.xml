@@ -443,4 +443,7 @@
     <dimen name="rcv_user_like_post_full_size_margin_top">19dp</dimen>
     <dimen name="image_btn_heart_post_full_size_margin_start">36dp</dimen>
     <dimen name="add_to_bookmark_disable_post_full_size_margin_end">36dp</dimen>
+    <dimen name="rcv_post_home_height">0dp</dimen>
+    <dimen name="image_btn_pause_or_start_video_width">20dp</dimen>
+    <dimen name="image_btn_pause_or_start_video_height">20dp</dimen>
 </resources>

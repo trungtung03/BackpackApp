@@ -69,6 +69,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/image_trip_item_rcv_post_home_02"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -290,7 +291,6 @@
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
-
                     android:id="@+id/layout_contain_list_photo_and_video"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -302,14 +302,15 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_describe_item_rcv_post_home">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/cv_video_view_item_rcv_post"
+                        android:layout_width="@dimen/video_view_item_rcv_post_width"
+                        android:layout_height="@dimen/video_view_item_rcv_post_height"
                         app:cardCornerRadius="@dimen/card_view_contains_information_item_rcv_post_home_radius"
                         app:cardElevation="@dimen/card_view_contains_information_item_rcv_post_home_card_elevation">
 
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/video_view_item_rcv_post_width"
+                            android:layout_height="@dimen/video_view_item_rcv_post_height"
                             android:layout_alignParentStart="true"
                             tools:ignore="UselessParent">
 
@@ -318,12 +319,11 @@
                                 android:layout_width="@dimen/video_view_item_rcv_post_width"
                                 android:layout_height="@dimen/video_view_item_rcv_post_height" />
 
-                            <androidx.appcompat.widget.AppCompatImageButton
+                            <de.hdodenhof.circleimageview.CircleImageView
                                 android:id="@+id/image_btn_pause_or_start_video"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/image_btn_pause_or_start_video_width"
+                                android:layout_height="@dimen/image_btn_pause_or_start_video_height"
                                 android:layout_centerInParent="true"
-                                android:background="@android:color/transparent"
                                 android:src="@drawable/pause_video_view_item_rcv_posts_home" />
 
                         </RelativeLayout>

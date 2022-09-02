@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/background_button_join_guide.xml" value="0.2395" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/background_indicator.xml" value="0.2265" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/backpack_sign_up_02_custom_button.xml" value="0.2265" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/baseline_pause_circle_filled_24.xml" value="0.209" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/custom_scroll_view_post_full_size.xml" value="0.2265" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/custom_toast.xml" value="0.2265" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/run_video_view_item_rcv_post_home.xml" value="0.209" />
+        <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/run_video_view_item_rcv_posts_home.xml" value="0.209" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/drawable/splash_background_backpack.xml" value="0.2445" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_invites_trip_location.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/BackpackApp/app/src/main/res/layout-v28/item_rcv_requests_trip_location.xml" value="0.28940217391304346" />

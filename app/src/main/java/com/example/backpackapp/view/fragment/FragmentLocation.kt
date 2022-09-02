@@ -1,5 +1,6 @@
 package com.example.backpackapp.view.fragment
 
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,7 +45,7 @@ class FragmentLocation : BaseFragment<FragmentLocationOverviewBinding>() {
             Glide.with(it).load(user.photoUrl).error(R.drawable.avatar_default)
                 .into(image_avatar_invites_comment)
         }
-
+        Log.d("ccc", user.photoUrl.toString())
         addList()
         GridLayoutManager(activity, 1).also { rcv_requests_location.layoutManager = it }
         LinearLayoutManager(
