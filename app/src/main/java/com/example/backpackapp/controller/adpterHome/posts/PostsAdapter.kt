@@ -20,7 +20,7 @@ class PostsAdapter(
     private val onClickJoin: () -> Unit,
     private val onClickItem: () -> Unit,
 
-) : RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
+    ) : RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViewHolder(
             context: Context,
@@ -51,7 +51,14 @@ class PostsAdapter(
         holder.itemView.btn_join_item_rcv_post_home.setOnClickListener { onClickJoin.invoke() }
         holder.itemView.setOnClickListener { onClickItem.invoke() }
         holder.itemView.image_btn_heart_item_post_home
-        holder.itemView.cv_video_view_item_rcv_post.setOnClickListener { clickVideo(position, holder.itemView, posts) }
+        holder.itemView.cv_video_view_item_rcv_post.setOnClickListener {
+            clickVideo(
+                position,
+                holder.itemView,
+                posts
+            )
+        }
+        clickHeart(holder.itemView)
     }
 
     override fun getItemCount(): Int {
@@ -82,6 +89,23 @@ class PostsAdapter(
                 itemView.video_view_item_rcv_post.pause()
                 itemView.image_btn_pause_or_start_video.setImageResource(R.drawable.pause_video_view_item_rcv_posts_home)
                 GA.COUNT_CLICK_VIDEO = 0
+            }
+        }
+    }
+
+    private fun clickHeart(
+        itemView: View
+    ) {
+        itemView.image_btn_heart_item_post_home.setOnClickListener {
+            GA.COUNT_CLICK++
+            itemView.image_btn_heart_item_post_home.setImageResource(
+                R.drawable.heart_enable_item_rcv_post_home
+            )
+            if (GA.COUNT_CLICK > 1) {
+                itemView.image_btn_heart_item_post_home.setImageResource(
+                    R.drawable.heart_disable_item_rcv_posts_home
+                )
+                GA.COUNT_CLICK = 0
             }
         }
     }
