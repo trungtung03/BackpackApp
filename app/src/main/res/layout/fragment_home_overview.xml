@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:id="@+id/fragment_home"
+    android:background="@color/white"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +33,17 @@
             android:layout_marginTop="@dimen/icon_search_city_home_margin_top"
             android:layout_marginEnd="@dimen/icon_search_city_home_margin_end"
             android:src="@drawable/round_search_city"
+            app:layout_constraintEnd_toStartOf="@id/icon_library_music_home"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/icon_library_music_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/icon_library_music_home_margin_top"
+            android:layout_marginEnd="@dimen/icon_library_music_home_margin_end"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_library_music_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
