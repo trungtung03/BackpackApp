@@ -9,7 +9,7 @@ import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.backpackapp.R
 import com.example.backpackapp.view.adapter.ViewPagerOverviewAdapter
-import com.example.backpackapp.ui.base.BaseActivity
+import com.example.backpackapp.view.base.BaseActivity
 import com.example.backpackapp.view.animation.ZoomOutPageTransformer
 import com.example.backpackapp.databinding.ActivityOverviewBinding
 import com.example.backpackapp.util.GA

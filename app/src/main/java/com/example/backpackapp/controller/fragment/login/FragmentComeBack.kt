@@ -11,7 +11,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.backpackapp.R
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentComebackBinding
 import com.example.backpackapp.controller.fragment.guide.FragmentGuide
 import com.example.backpackapp.util.Parameters

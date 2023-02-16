@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/item_rcv_tracks_margin_top"
+    android:layout_marginBottom="@dimen/item_rcv_tracks_margin_bottom">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avt_singer_rcv_all_track"
+        android:layout_width="@dimen/avt_singer_rcv_all_track_width"
+        android:layout_height="@dimen/avt_singer_rcv_all_track_height"
+        android:src="@drawable/avatar_info_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name_singer_rcv_all_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_name_singer_rcv_all_track_margin_start"
+        android:layout_marginTop="@dimen/tv_name_singer_rcv_all_track_margin_top"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_name_singer_rcv_all_track_line_height"
+        android:text="@string/beyonce"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_name_singer_rcv_all_track_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/avt_singer_rcv_all_track"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_song_rcv_all_tracks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_title_song_rcv_all_tracks_margin_start"
+        android:layout_marginTop="@dimen/tv_title_song_rcv_all_tracks_margin_top"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/tv_title_song_rcv_all_tracks_line_height"
+        android:text="@string/jumping_over_the_roofs"
+        android:textAllCaps="false"
+        android:textColor="@color/text_backpack_sign_up_to_log_in"
+        android:textSize="@dimen/tv_title_song_rcv_all_tracks_size"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/avt_singer_rcv_all_track"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_singer_rcv_all_track"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_playing_rcv_all_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_playing_rcv_all_track_line_height"
+        android:text="@string/playing_now"
+        android:textAllCaps="true"
+        android:textColor="@color/text_backpack_sign_up_to_log_in"
+        android:textSize="@dimen/tv_playing_rcv_all_track_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name_singer_rcv_all_track"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_name_singer_rcv_all_track"
+        tools:ignore="SmallSp,UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time_music_rcv_all_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_time_music_rcv_all_track_margin_top"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_time_music_rcv_all_track_line_height"
+        android:text="@string/_04_58"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_time_music_rcv_all_track_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_playing_rcv_all_track"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

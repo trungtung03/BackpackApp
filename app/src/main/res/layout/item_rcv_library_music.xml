@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/layout_rcv_width"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_rcv_library_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/card_view_rcv_library_music_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/avt_singer_rcv_library_music"
+            android:layout_width="@dimen/avt_singer_rcv_library_music_width"
+            android:layout_height="@dimen/avt_singer_rcv_library_music"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar_singer" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name_singer_rcv_library_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_name_singer_rcv_library_music_margin_top"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/tv_name_singer_rcv_library_music_line_height"
+        android:text="@string/midnight_dogs"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_name_singer_rcv_library_music_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view_rcv_library_music"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_song_title_rcv_library_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_song_title_rcv_library_music_margin_top"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/tv_song_title_rcv_library_music_line_height"
+        android:text="@string/loved_it_out_there"
+        android:textColor="@color/title_backpack_splash_color"
+        android:textSize="@dimen/tv_song_title_rcv_library_music_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_singer_rcv_library_music"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time_music_rcv_library_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_time_music_rcv_library_music_margin_top"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/tv_time_music_rcv_library_music_line_height"
+        android:text="@string/_04_57"
+        android:textSize="@dimen/tv_time_music_rcv_library_music_size"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view_rcv_library_music"
+        tools:ignore="SmallSp,UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

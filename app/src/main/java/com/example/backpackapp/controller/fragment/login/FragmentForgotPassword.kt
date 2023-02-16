@@ -3,7 +3,7 @@ package com.example.backpackapp.controller.fragment.login
 import android.content.Intent
 import android.view.View
 import com.example.backpackapp.controller.activity.splash.SplashActivity
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentLogInRecoverBinding
 import kotlinx.android.synthetic.main.fragment_log_in_recover.*
 

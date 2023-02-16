@@ -1,8 +1,8 @@
 package com.example.backpackapp.controller.fragment.guide.uiGuide
 
 import android.view.View
-import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentGuide04Binding
+import com.example.backpackapp.view.base.BaseFragment
 
 class FragmentGuide04 : BaseFragment<FragmentGuide04Binding>() {
     private lateinit var fragmentGuide04Binding: FragmentGuide04Binding

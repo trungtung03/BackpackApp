@@ -1,4 +1,4 @@
-package com.example.backpackapp.ui.custom
+package com.example.backpackapp.view
 
 import android.annotation.SuppressLint
 import android.content.Context

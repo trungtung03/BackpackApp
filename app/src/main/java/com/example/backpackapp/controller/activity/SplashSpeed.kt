@@ -6,7 +6,7 @@ import android.os.Handler
 import android.view.View
 import com.example.backpackapp.R
 import com.example.backpackapp.controller.activity.splash.SplashActivity
-import com.example.backpackapp.ui.base.BaseActivity
+import com.example.backpackapp.view.base.BaseActivity
 import com.example.backpackapp.databinding.SplashSpeedBinding
 import com.example.backpackapp.util.Parameters
 

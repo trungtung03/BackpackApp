@@ -19,7 +19,7 @@ import com.example.backpackapp.model.profile.TravelPhotosProfile
 import com.example.backpackapp.controller.activity.inApp.Overview
 import com.example.backpackapp.view.adapter.adapterProfile.PreviousTripAdapter
 import com.example.backpackapp.view.adapter.adapterProfile.TravelPhotosAdapter
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentProfileOverviewBinding
 import com.example.backpackapp.controller.fragment.signup.FragmentSignUp
 import com.example.backpackapp.util.Parameters

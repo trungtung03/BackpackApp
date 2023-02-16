@@ -11,7 +11,7 @@ import com.example.backpackapp.model.location.RequestsLocation
 import com.example.backpackapp.controller.activity.inApp.Overview
 import com.example.backpackapp.view.adapter.adapterLocation.InvitesAdapter
 import com.example.backpackapp.view.adapter.adapterLocation.RequestsAdapter
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentLocationOverviewBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

@@ -1,7 +1,7 @@
 package com.example.backpackapp.controller.fragment.guide.uiGuide
 
 import android.view.View
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentGuide03Binding
 
 class FragmentGuide03 : BaseFragment<FragmentGuide03Binding>() {

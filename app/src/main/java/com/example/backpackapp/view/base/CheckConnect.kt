@@ -1,4 +1,4 @@
-package com.example.backpackapp.ui.base
+package com.example.backpackapp.view.base
 
 import android.content.Context
 import android.net.ConnectivityManager

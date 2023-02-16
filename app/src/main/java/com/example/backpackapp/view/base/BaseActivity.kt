@@ -1,9 +1,8 @@
-package com.example.backpackapp.ui.base
+package com.example.backpackapp.view.base
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -25,10 +24,11 @@ abstract class BaseActivity : AppCompatActivity() {
     protected abstract fun initView()
 
     open fun fullScreen() {
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
     }
 
     open fun animationSwitchActivity(input: Int, output: Int) {

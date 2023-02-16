@@ -8,8 +8,8 @@ import android.os.Handler
 import android.view.View
 import android.view.View.VISIBLE
 import com.example.backpackapp.R
-import com.example.backpackapp.ui.base.BaseActivity
-import com.example.backpackapp.ui.base.CheckConnect
+import com.example.backpackapp.view.base.BaseActivity
+import com.example.backpackapp.view.base.CheckConnect
 import com.example.backpackapp.databinding.SplashActivityBinding
 import com.example.backpackapp.controller.fragment.login.FragmentComeBack
 import com.example.backpackapp.controller.fragment.login.FragmentLogin

@@ -14,7 +14,7 @@ import android.view.View.GONE
 import android.widget.Toast
 import com.example.backpackapp.R
 import com.example.backpackapp.controller.activity.splash.SplashActivity
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentSignUpBinding
 import com.example.backpackapp.controller.fragment.login.FragmentLogin
 import com.example.backpackapp.util.Parameters

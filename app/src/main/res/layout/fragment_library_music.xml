@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_library_music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/round_backpack_library_music"
+            layout="@layout/round_back_backpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/icon_search_library_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/icon_search_library_music_margin_top"
+            android:layout_marginEnd="@dimen/icon_search_library_music_margin_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:searchIcon="@drawable/round_search_city" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_library_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/round_backpack_library_music"
+            android:layout_marginStart="@dimen/tv_title_library_music_margin_start"
+            android:layout_marginTop="@dimen/tv_title_library_music_margin_top"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/tv_title_library_music_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_title_library_music_size"
+            android:textStyle="bold"
+            app:lineHeight="@dimen/tv_title_library_music_line_height"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_search_library_music"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/round_shuffle_margin_top"
+            android:layout_marginEnd="@dimen/round_shuffle_margin_end"
+            android:src="@drawable/round_shuffle_24px" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_music_for_you_library_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_library_music"
+            android:layout_marginStart="@dimen/rcv_singer_library_music_margin_start"
+            android:layout_marginTop="@dimen/rcv_singer_library_music_margin_top"
+            android:layout_marginEnd="@dimen/rcv_singer_library_music_margin_end" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tracks_library_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcv_music_for_you_library_music"
+            android:layout_marginStart="@dimen/tv_tracks_library_music_margin_start"
+            android:layout_marginTop="@dimen/tv_tracks_library_music_margin_top"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/tv_tracks_library_music_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_tracks_library_music_size"
+            android:textStyle="bold"
+            app:lineHeight="@dimen/tv_tracks_library_music_line_height"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcv_music_for_you_library_music"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/round_shuffle_margin_top_38dp"
+            android:layout_marginEnd="@dimen/round_shuffle_margin_end_26dp"
+            android:src="@drawable/round_shuffle_24px" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_list_music_library_music"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rcv_list_music_library_music_height"
+            android:layout_below="@id/tv_tracks_library_music"
+            android:layout_marginStart="@dimen/rcv_list_music_library_music_margin_start"
+            android:layout_marginTop="@dimen/rcv_list_music_library_music_margin_top"
+            android:layout_marginEnd="@dimen/rcv_list_music_library_music_margin_end" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_contain_information_music"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_contain_information_music_height"
+            android:layout_below="@+id/rcv_list_music_library_music"
+            android:layout_marginTop="@dimen/layout_contain_information_music_margin_top"
+            android:background="@color/black">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avt_singer_library_music"
+                android:layout_width="@dimen/img_avt_singer_library_music_width"
+                android:layout_height="@dimen/img_avt_singer_library_music_height"
+                android:layout_marginStart="@dimen/img_avt_singer_library_music_margin_start"
+                android:src="@mipmap/icon_launcher_round"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/img_avt_singer_library_music_bolder_width"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_song_library_music"
+                android:layout_width="@dimen/tv_name_song_library_music_width"
+                android:layout_height="@dimen/tv_name_song_library_music_height"
+                android:layout_marginStart="@dimen/tv_name_song_library_music_margin_start"
+                android:layout_marginEnd="@dimen/tv_name_song_library_music_margin_end"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="@dimen/tv_name_song_library_music_line_height"
+                android:text="@string/tv_name_song_library_music_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_name_song_library_music_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/item_rcv_more_layout_ellipse_library_music"
+                app:layout_constraintStart_toEndOf="@id/img_avt_singer_library_music"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SmallSp,UnusedAttribute" />
+
+            <LinearLayout
+                android:id="@+id/item_rcv_more_layout_ellipse_library_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/item_rcv_more_layout_ellipse_library_music_margin_end"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_1"
+                    tools:ignore="InefficientWeight" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ellipse_overview_margin_start_and_end"
+                    android:layout_marginEnd="@dimen/ellipse_overview_margin_start_and_end"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_2"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edt_width_sign_up_02_backpack"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:src="@drawable/ellipse_overview_3" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar_library_music"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seek_bar_library_music_height"
+            android:layout_below="@id/layout_contain_information_music"
+            android:layout_marginTop="@dimen/seek_bar_library_music_margin_top"
+            android:maxHeight="@dimen/seek_bar_library_music_max_height"
+            android:minHeight="@dimen/seek_bar_library_music_min_height"
+            android:progressDrawable="@drawable/custom_background_seekbar"
+            android:splitTrack="false"
+            android:thumb="@drawable/custom_thumb"
+            android:thumbOffset="12dp"
+            android:thumbTint="@null" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/seek_bar_library_music">
+
+            <TextView
+                android:id="@+id/tv_time_music_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_time_music_start_margin_start"
+                android:layout_marginTop="@dimen/tv_time_music_start_margin_top"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="@dimen/tv_time_music_start_line_height"
+                android:text="@string/tv_time_music_start_text"
+                android:textSize="@dimen/tv_time_music_start_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SmallSp,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tv_time_music_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_time_music_end_margin_top"
+                android:layout_marginEnd="@dimen/tv_time_music_end_margin_end"
+                android:fontFamily="@font/poppins"
+                android:lineHeight="@dimen/tv_time_music_end_line_height"
+                android:text="@string/tv_time_music_end_text"
+                android:textSize="@dimen/tv_time_music_end_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SmallSp,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_pause_resume_library_music"
+                android:layout_width="@dimen/icon_pause_resume_library_music_width"
+                android:layout_height="@dimen/icon_pause_resume_library_music_height"
+                android:src="@drawable/round_pause_circle_filled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_repeat_library_music"
+                android:layout_width="@dimen/icon_repeat_library_music_width"
+                android:layout_height="@dimen/icon_repeat_library_music_height"
+                android:layout_marginStart="@dimen/icon_repeat_library_music_margin_start"
+                android:src="@drawable/round_repeat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_previous_library_music"
+                android:layout_width="@dimen/icon_previous_library_music_width"
+                android:layout_height="@dimen/icon_previous_library_music_height"
+                android:layout_marginEnd="@dimen/icon_previous_library_music_margin_end"
+                android:src="@drawable/round_skip_previous"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/icon_pause_resume_library_music"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_next_library_music"
+                android:layout_width="@dimen/icon_next_library_music_width"
+                android:layout_height="@dimen/icon_next_library_music_height"
+                android:layout_marginStart="@dimen/icon_next_library_music_margin_start"
+                android:src="@drawable/round_skip_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon_pause_resume_library_music"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_volume_library_music"
+                android:layout_width="@dimen/icon_volume_library_music_width"
+                android:layout_height="@dimen/icon_volume_library_music_height"
+                android:layout_marginEnd="@dimen/icon_volume_library_music_margin_end"
+                android:src="@drawable/round_volume_down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

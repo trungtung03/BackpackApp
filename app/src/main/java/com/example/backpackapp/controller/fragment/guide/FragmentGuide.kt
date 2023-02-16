@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.backpackapp.R
 import com.example.backpackapp.controller.activity.inApp.Overview
 import com.example.backpackapp.view.adapter.ViewPagerGuideAdapter
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentGuideBinding
 import com.example.backpackapp.util.GA
 import kotlinx.android.synthetic.main.fragment_guide.*

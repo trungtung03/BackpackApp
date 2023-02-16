@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.backpackapp.model.chat.MemberChat
 import com.example.backpackapp.controller.activity.inApp.Overview
 import com.example.backpackapp.view.adapter.adapterChat.MemberChatAdapter
-import com.example.backpackapp.ui.base.BaseFragment
+import com.example.backpackapp.view.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentChatOverviewBinding
 import com.google.firebase.auth.ktx.*
 import com.google.firebase.ktx.Firebase

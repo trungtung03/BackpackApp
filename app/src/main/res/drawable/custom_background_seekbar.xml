@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/secondary_progress">
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:centerColor="#D0FF51F6"
+                android:endColor="#D8FF5925"
+                android:startColor="#7032FF" />
+        </shape>
+    </item>
+
+    <item android:id="@+id/progress">
+        <clip android:drawable="@drawable/seekbar" />
+    </item>
+
+</layer-list>
