@@ -1,8 +1,10 @@
 package com.example.backpackapp.model.music
 
-class LibraryMusic(
-    val imageAvatar : String,
-    val nameSinger : String,
-    val songTitle : String,
-    val timeMusic : String
+data class LibraryMusic(
+    val imageAvatar: String? = null,
+    val nameSinger: String? = null,
+    val songTitle: String? = null,
+    val timeMusic: String? = null,
+    val url: String? = null,
+    val gifWaves: String? = null
 )

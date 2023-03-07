@@ -8,12 +8,12 @@ import com.example.backpackapp.controller.activity.inApp.Overview
 import com.example.backpackapp.controller.activity.inApp.homePostFullSize.PostFullSizeActivity
 import com.example.backpackapp.view.adapter.adpterHome.ListDataAdapter
 import com.example.backpackapp.databinding.FragmentHomeOverviewBinding
-import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.model.home.ListData
 import com.example.backpackapp.model.home.popularDestinations.PopularDestinations
 import com.example.backpackapp.model.home.posts.Posts
 import com.example.backpackapp.util.GA
 import com.example.backpackapp.controller.fragment.music.FragmentLibraryMusic
+import com.example.backpackapp.view.base.BaseFragment
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_home_overview.*

@@ -44,6 +44,8 @@
         android:textColor="@color/text_backpack_sign_up_to_log_in"
         android:textSize="@dimen/tv_title_song_rcv_all_tracks_size"
         android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/card_contains_gif"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/avt_singer_rcv_all_track"
         app:layout_constraintTop_toBottomOf="@id/tv_name_singer_rcv_all_track"
         tools:ignore="UnusedAttribute" />
@@ -78,5 +80,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_playing_rcv_all_track"
         tools:ignore="UnusedAttribute" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contains_gif"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="@id/tv_time_music_rcv_all_track"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time_music_rcv_all_track"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_music_rcv_all_track">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif_music_waves"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

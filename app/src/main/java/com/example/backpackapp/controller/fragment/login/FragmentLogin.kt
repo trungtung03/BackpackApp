@@ -2,7 +2,7 @@
 
 package com.example.backpackapp.controller.fragment.login
 
-import android.app.ProgressDialog
+import android.app.AlertDialog
 import android.content.Intent
 import android.text.TextUtils
 import android.text.method.PasswordTransformationMethod
@@ -11,15 +11,17 @@ import android.view.View
 import android.view.View.GONE
 import com.example.backpackapp.R
 import com.example.backpackapp.controller.activity.splash.SplashActivity
-import com.example.backpackapp.ui.base.BaseFragment
 import com.example.backpackapp.databinding.FragmentLogInBinding
 import com.example.backpackapp.controller.fragment.guide.FragmentGuide
 import com.example.backpackapp.controller.fragment.signup.FragmentSignUp
 import com.example.backpackapp.util.Parameters
+import com.example.backpackapp.view.CustomProgressDialog
+import com.example.backpackapp.view.base.BaseFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
+import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.fragment_log_in.*
 
 @Suppress("ControlFlowWithEmptyBody", "DEPRECATION")
@@ -27,7 +29,7 @@ class FragmentLogin : BaseFragment<FragmentLogInBinding>(), View.OnClickListener
     private lateinit var fragmentLogInBinding: FragmentLogInBinding
 
     private var isCheckClick: Boolean = false
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var progressDialog: AlertDialog
 
     override fun initView(view: View) {
         fragmentLogInBinding = FragmentLogInBinding.bind(view)
@@ -45,7 +47,7 @@ class FragmentLogin : BaseFragment<FragmentLogInBinding>(), View.OnClickListener
         img_btn_hide_show_password_log_in.setOnClickListener(this)
         tv_forgot_password_backpack_log_in.setOnClickListener(this)
         btn_login_backpack.setOnClickListener(this)
-        activity?.let { progressDialog = ProgressDialog(it) }
+//        activity?.let { progressDialog = SpotsDialog(it, R.style.CustomProgressDialog) }
     }
 
     override fun onClick(p0: View?) {
@@ -105,9 +107,10 @@ class FragmentLogin : BaseFragment<FragmentLogInBinding>(), View.OnClickListener
                 Parameters.CHECK_ENTERED_EMAIL_PASSWORD_LOGIN
             )
         } else {
-            progressDialog.setTitle(Parameters.LOADING_DATA)
-            progressDialog.setMessage(Parameters.WAIT_DATA_IS_LOADING)
-            progressDialog.show()
+//            progressDialog.setTitle(Parameters.LOADING_DATA)
+//            progressDialog.setMessage(Parameters.WAIT_DATA_IS_LOADING)
+//            progressDialog.show()
+            activity?.let { CustomProgressDialog(it).onPreExecute() }
             activity?.let {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(it) { task ->
@@ -126,7 +129,8 @@ class FragmentLogin : BaseFragment<FragmentLogInBinding>(), View.OnClickListener
                                 .replace(R.id.splash_activity, FragmentGuide())
                                 .remove(FragmentLogin()).addToBackStack(null)
                                 .commitAllowingStateLoss()
-                            progressDialog.dismiss()
+                            CustomProgressDialog(it).onPostExecute()
+//                            progressDialog.dismiss()
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(
@@ -139,7 +143,8 @@ class FragmentLogin : BaseFragment<FragmentLogInBinding>(), View.OnClickListener
                                 Parameters.CHECK_LOGIN_FAIl
                             )
                             img_warning_log_in.visibility = View.VISIBLE
-                            progressDialog.dismiss()
+//                            progressDialog.dismiss()
+                            CustomProgressDialog(it).onPostExecute()
                         }
                     }
             }

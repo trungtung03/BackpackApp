@@ -1,5 +1,6 @@
 package com.example.backpackapp.controller.fragment
 
+
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.backpackapp.model.chat.MemberChat
@@ -15,6 +16,7 @@ import java.util.*
 class FragmentChat : BaseFragment<FragmentChatOverviewBinding>() {
     private lateinit var fragmentChatOverviewBinding: FragmentChatOverviewBinding
     private val listMemberChat by lazy { arrayListOf<MemberChat>() }
+    private var mMemberChatAdapter: MemberChatAdapter? = null
 
     override fun initView(view: View) {
         fragmentChatOverviewBinding = FragmentChatOverviewBinding.bind(view)
@@ -31,8 +33,9 @@ class FragmentChat : BaseFragment<FragmentChatOverviewBinding>() {
 
         addList()
         GridLayoutManager(activity, 1).also { rcv_member_chat.layoutManager = it }
-        activity?.let { MemberChatAdapter(it, listMemberChat) }
-            .also { rcv_member_chat.adapter = it }
+        mMemberChatAdapter = activity?.let { MemberChatAdapter(it) }
+        mMemberChatAdapter?.setData(listMemberChat)
+        rcv_member_chat.adapter = mMemberChatAdapter
     }
 
     private fun addList() {

@@ -182,7 +182,7 @@
             android:progressDrawable="@drawable/custom_background_seekbar"
             android:splitTrack="false"
             android:thumb="@drawable/custom_thumb"
-            android:thumbOffset="12dp"
+            android:thumbOffset="@dimen/seek_bar_library_music_thumb"
             android:thumbTint="@null" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -224,21 +224,29 @@
                 android:id="@+id/icon_pause_resume_library_music"
                 android:layout_width="@dimen/icon_pause_resume_library_music_width"
                 android:layout_height="@dimen/icon_pause_resume_library_music_height"
-                android:src="@drawable/round_pause_circle_filled"
+                android:src="@drawable/resume_music"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/icon_repeat_library_music"
-                android:layout_width="@dimen/icon_repeat_library_music_width"
-                android:layout_height="@dimen/icon_repeat_library_music_height"
-                android:layout_marginStart="@dimen/icon_repeat_library_music_margin_start"
-                android:src="@drawable/round_repeat"
+            <RelativeLayout
+                android:id="@+id/layout_repeat_music"
+                android:layout_width="@dimen/layout_repeat_music_width"
+                android:layout_height="@dimen/layout_repeat_music_height"
+                android:layout_marginStart="@dimen/layout_repeat_music_margin_start"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_repeat_library_music"
+                    android:layout_width="@dimen/icon_repeat_library_music_width"
+                    android:layout_height="@dimen/icon_repeat_library_music_height"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/repeat_36" />
+
+            </RelativeLayout>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon_previous_library_music"
@@ -260,17 +268,26 @@
                 app:layout_constraintStart_toEndOf="@id/icon_pause_resume_library_music"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/icon_volume_library_music"
-                android:layout_width="@dimen/icon_volume_library_music_width"
-                android:layout_height="@dimen/icon_volume_library_music_height"
+            <RelativeLayout
+                android:id="@+id/layout_volume_music"
+                android:layout_width="@dimen/layout_volume_music_width"
+                android:layout_height="@dimen/layout_volume_music_height"
                 android:layout_marginEnd="@dimen/icon_volume_library_music_margin_end"
-                android:src="@drawable/round_volume_down"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_volume_library_music"
+                    android:layout_width="@dimen/icon_volume_library_music_width"
+                    android:layout_height="@dimen/icon_volume_library_music_height"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/volume_48" />
+
+            </RelativeLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </RelativeLayout>
 
 </RelativeLayout>

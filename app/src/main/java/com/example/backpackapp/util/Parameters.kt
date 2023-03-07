@@ -33,4 +33,5 @@ object Parameters {
     const val LOADING_DATA = "Loading....."
     const val CHECK_FORMAT_EMAIL_REGISTER = "Email format is not correct"
     const val IS_EMPTY = ""
+    const val PATTERN_DATE_FORMAT = "hh:mma"
 }

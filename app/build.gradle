@@ -39,7 +39,6 @@ android {
 }
 
 dependencies {
-
     //noinspection GradleDependency
     implementation 'androidx.core:core-ktx:1.7.0'
     //noinspection GradleDependency
@@ -52,36 +51,43 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // Image
+    /** Custom Image */
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
 
     // Country Code Picker
     implementation 'com.hbb20:ccp:2.6.0'
 
-    // Firebase
+    /** Firebase */
     implementation 'com.google.firebase:firebase-analytics-ktx:21.0.0'
     implementation platform('com.google.firebase:firebase-bom:30.0.1')
     implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
 
-    // Fingerprint check
+    /** Fingerprint check */
     implementation 'com.mikhaellopez:biometric:1.1.0'
     implementation 'androidx.biometric:biometric:1.2.0-alpha04'
     implementation 'dev.skomlach:biometric:2.0.99'
 
-    // connect page on viewPager
+    /** Connect page on viewPager */
     implementation 'me.relex:circleindicator:2.1.6'
 
-    // Load image from links
+    /** Load image from links */
     implementation 'com.github.bumptech.glide:glide:4.13.2'
 
-    // CardView
+    /** CardView */
     implementation 'androidx.cardview:cardview:1.0.0'
 
-    // RecyclerView
+    /** RecyclerView */
     implementation 'androidx.recyclerview:recyclerview:1.3.0-alpha02'
     implementation 'androidx.recyclerview:recyclerview-selection:1.2.0-alpha01'
 
-    // ViewBinding
+    /** ViewBinding */
     implementation 'androidx.databinding:viewbinding:7.2.1'
+
+    /** Drawabble Gif */
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
+
+    // Custom ProgressDialog
+    implementation 'com.github.d-max:spots-dialog:0.7'
 }
