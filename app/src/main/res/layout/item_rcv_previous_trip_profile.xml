@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/item_rcv_previous_trip_overview_background"
+                    android:id="@+id/item_rcv_previous_trip"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/overview_background_height"
                     android:scaleType="fitXY"
@@ -37,7 +37,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/item_rcv_previous_trip_tv_count_overview_backpack"
+                    android:id="@+id/item_rcv_previous_trip_tv_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/text_count_overview_backpack_margin_start"
@@ -68,12 +68,12 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_day_trip_overview_backpack_size"
-                    app:layout_constraintStart_toEndOf="@+id/item_rcv_previous_trip_tv_count_overview_backpack"
+                    app:layout_constraintStart_toEndOf="@+id/item_rcv_previous_trip_tv_count"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/item_rcv_previous_trip_tv_date_time_overview_backpack"
+                    android:id="@+id/item_rcv_previous_trip_tv_date_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/tv_date_time_overview_backpack_margin_top"
@@ -89,7 +89,7 @@
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                 <com.hbb20.CountryCodePicker
-                    android:id="@+id/item_rcv_previous_trip_tv_to_country_overview_backpack"
+                    android:id="@+id/item_rcv_previous_trip_tv_to_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/text_to_country_overview_backpack_margin_top"
@@ -105,7 +105,7 @@
                     app:ccp_textSize="@dimen/text_to_country_overview_backpack_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_rcv_previous_trip_tv_date_time_overview_backpack"
+                    app:layout_constraintTop_toBottomOf="@+id/item_rcv_previous_trip_tv_date_time"
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
@@ -118,8 +118,8 @@
                     android:orientation="horizontal"
                     android:weightSum="9"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item_rcv_previous_trip_tv_to_country_overview_backpack"
-                    app:layout_constraintTop_toBottomOf="@id/item_rcv_previous_trip_tv_date_time_overview_backpack">
+                    app:layout_constraintEnd_toStartOf="@id/item_rcv_previous_trip_tv_to_country"
+                    app:layout_constraintTop_toBottomOf="@id/item_rcv_previous_trip_tv_date_time">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="@dimen/edt_width_sign_up_02_backpack"
@@ -146,7 +146,7 @@
                 </LinearLayout>
 
                 <com.hbb20.CountryCodePicker
-                    android:id="@+id/item_rcv_previous_trip_text_from_country_overview_backpack"
+                    android:id="@+id/item_rcv_previous_trip_text_from_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/text_from_country_overview_backpack_margin_top"
@@ -160,7 +160,7 @@
                     app:ccp_showPhoneCode="false"
                     app:ccp_textSize="@dimen/text_to_country_overview_backpack_size"
                     app:layout_constraintEnd_toStartOf="@id/item_rcv_previous_trip_layout_ellipse_overview_backpack"
-                    app:layout_constraintTop_toBottomOf="@id/item_rcv_previous_trip_tv_date_time_overview_backpack" />
+                    app:layout_constraintTop_toBottomOf="@id/item_rcv_previous_trip_tv_date_time" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/item_rcv_previous_trip_item_airplane_mode_overview"
@@ -169,7 +169,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/item_airplane_mode_overview"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item_rcv_previous_trip_text_from_country_overview_backpack"
+                    app:layout_constraintEnd_toStartOf="@id/item_rcv_previous_trip_text_from_country"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.9" />
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_send_text_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tv_send_text_msg_height"
+        android:layout_marginEnd="@dimen/tv_send_text_msg_margin_end"
+        android:background="@drawable/custom_bg_text_msg"
+        android:fontFamily="@font/poppins_medium"
+        android:lineHeight="@dimen/tv_send_text_msg_line_height"
+        android:paddingStart="@dimen/tv_send_text_msg_padding_start"
+        android:paddingTop="@dimen/tv_send_text_msg_padding_top"
+        android:paddingEnd="@dimen/tv_send_text_msg_padding_end"
+        android:text="@string/tv_send_text_msg_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_send_text_msg_size"
+        android:textStyle="normal"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_send_msg"
+        android:layout_width="@dimen/avatar_send_msg_width"
+        android:layout_height="@dimen/avatar_send_msg_height"
+        android:src="@drawable/avatar_comback_backpack" />
+
+</LinearLayout>

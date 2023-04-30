@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-
-        <item name="colorPrimaryDark">@color/black</item>
-
-        <item name="drawerArrowStyle">@style/DrawerIcon</item>
-        <item name="android:listDivider">@android:color/transparent</item>
-    </style>
-
-    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
-        <item name="color">#AE000000</item>
-    </style>
-
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -20,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#005EFF</color>
+    <color name="yellow">#939300</color>
 
     <!--    Splash 1-->
     <color name="text_backpack_splash_color">#FFD500</color>
@@ -44,4 +33,8 @@
 
     <!--    Fragment Home-->
     <color name="background_view">#DCDCDC</color>
+
+    <!-- RatingBar-->
+    <color name="color_stars">#FFD500</color>
+    <color name="color_status_bar_splash">#d4c5c5</color>
 </resources>

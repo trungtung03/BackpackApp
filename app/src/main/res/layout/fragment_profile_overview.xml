@@ -188,12 +188,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_contain_toolbar_custom"
             tools:ignore="UselessLeaf">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_name_profile_overview"
+                android:id="@+id/tv_name_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_name_profile_overview_backpack_margin_start"
@@ -210,7 +211,7 @@
                 android:id="@+id/tv_reviews_overview_backpack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_name_profile_overview"
+                android:layout_below="@id/tv_name_profile"
                 android:layout_marginStart="@dimen/text_reviews_overview_backpack_margin_start"
                 android:fontFamily="@font/poppins_medium"
                 android:lineHeight="@dimen/text_reviews_overview_backpack_line_height"
@@ -219,57 +220,18 @@
                 android:textSize="@dimen/text_reviews_overview_backpack_size"
                 tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
-            <LinearLayout
-                android:id="@+id/layout_contain_star_reviews"
+            <RatingBar
+                android:id="@+id/rating_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_reviews_overview_backpack"
                 android:layout_marginStart="@dimen/text_reviews_overview_backpack_margin_start"
                 android:layout_marginTop="@dimen/layout_contain_star_reviews_margin_top"
                 android:layout_marginBottom="@dimen/layout_contain_star_reviews_margin_bottom"
-                android:orientation="horizontal"
-                android:weightSum="10">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_star_reviews_01"
-                    android:layout_width="@dimen/start_reviews_width"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:src="@drawable/star_reviews" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_star_reviews_02"
-                    android:layout_width="@dimen/start_reviews_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/star_reviews_overview_margin_start_and_end"
-                    android:layout_weight="2"
-                    android:src="@drawable/star_reviews" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_star_reviews_03"
-                    android:layout_width="@dimen/start_reviews_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/star_reviews_overview_margin_start_and_end"
-                    android:layout_marginEnd="@dimen/star_reviews_overview_margin_start_and_end"
-                    android:layout_weight="2"
-                    android:src="@drawable/star_reviews" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_star_reviews_04"
-                    android:layout_width="@dimen/start_reviews_width"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/star_reviews_overview_margin_start_and_end"
-                    android:layout_weight="2"
-                    android:src="@drawable/star_reviews" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_star_reviews_05"
-                    android:layout_width="@dimen/start_reviews_width"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:src="@drawable/star_reviews" />
-
-            </LinearLayout>
+                android:numStars="5"
+                android:progressTint="@color/color_stars"
+                android:rating="0"
+                android:stepSize="0.5" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circle_image_avatar_profile_overview"
@@ -425,7 +387,7 @@
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_photo_from_previous_trip"
+                    android:id="@+id/rcv_travel_photo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/rcv_photo_previous_trip_margin_top_and_end_start"
@@ -445,7 +407,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/tv_previous_trip_profile_size"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/rcv_photo_from_previous_trip"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_travel_photo"
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -464,7 +426,7 @@
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_trips_taken_in_past_months"
+                    android:id="@+id/rcv_previous_trip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/rcv_trips_taken_in_past_months_margin_top_and_start_and_end"

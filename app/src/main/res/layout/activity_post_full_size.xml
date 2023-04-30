@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".controller.activity.inApp.homePostFullSize.PostFullSizeActivity">
+    tools:context=".controller.PostFullSizeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -85,6 +85,7 @@
                     android:id="@+id/image_avatar_post_full_size"
                     android:layout_width="@dimen/image_avatar_post_full_size_width"
                     android:layout_height="@dimen/image_avatar_post_full_size_height"
+                    android:scaleType="fitXY"
                     android:layout_marginStart="@dimen/image_avatar_post_full_size_margin_start"
                     android:layout_marginTop="@dimen/image_avatar_post_full_size_margin_top"
                     android:src="@drawable/avatar_info_profile"

@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/image_item_rcv_popular_destinations_home"
+                    android:id="@+id/image_item_rcv_popular_destinations"
                     android:layout_width="@dimen/image_item_travel_photo_rcv_width"
                     android:layout_height="@dimen/image_item_travel_photo_rcv_height"
                     android:scaleType="fitXY"
@@ -37,7 +37,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_item_rcv_popular_destinations_home"
+                    android:id="@+id/tv_item_rcv_popular_destinations"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/tv_item_country_rcv_margin_start"
@@ -48,8 +48,8 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/tv_item_country_rcv_size"
-                    app:layout_constraintBottom_toBottomOf="@id/image_item_rcv_popular_destinations_home"
-                    app:layout_constraintStart_toStartOf="@id/image_item_rcv_popular_destinations_home"
+                    app:layout_constraintBottom_toBottomOf="@id/image_item_rcv_popular_destinations"
+                    app:layout_constraintStart_toStartOf="@id/image_item_rcv_popular_destinations"
                     tools:ignore="HardcodedText,SpUsage,UnusedAttribute" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,7 +44,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.example.backpackapp.view.CustomViewPager
+                <com.example.backpackapp.custom.CustomViewPager
                     android:id="@+id/view_pager_guide_backpack"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/view_pager_guide_backpack_height"

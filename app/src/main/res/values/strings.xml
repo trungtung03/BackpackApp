@@ -123,4 +123,21 @@
     <string name="jumping_over_the_roofs">Jumping over the roofs</string>
     <string name="playing_now">Playing now</string>
     <string name="_04_58">04:58</string>
+
+    <!--    Dialog Post-->
+    <string name="create_posts">Create Posts</string>
+    <string name="continue_">Continue</string>
+    <string name="nguy_n_trung_t_ng">Nguyễn Trung Tùng</string>
+    <string name="what_are_you_thinking">What are you thinking ?</string>
+    <string name="add_image">More photos</string>
+    <string name="tag_user">Tag your friends</string>
+    <string name="camera">Open camera</string>
+    <string name="sticker">More feelings</string>
+    <string name="camera_live">Live stream</string>
+
+    <!--    Fragment Box Chat-->
+    <string name="tv_name_box_chat_text">Michael Tùng</string>
+    <string name="edt_box_chat_hint">Write a message…</string>
+    <string name="tv_receive_text_msg_text">Hey when are you going?</string>
+    <string name="tv_send_text_msg_text">Hey when are you going?</string>
 </resources>

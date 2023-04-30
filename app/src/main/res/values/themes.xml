@@ -13,15 +13,46 @@
         <item name="android:statusBarColor" tools:ignore="ObsoleteSdkInt" tools:targetApi="l">
             ?attr/colorPrimaryVariant
         </item>
+
+        <!-- CUSTOM THEME-->
+
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/background_splash_speed_backpack</item>
+
+    <style name="ThemeOverview" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimaryDark">@color/black</item>
+
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:listDivider">@android:color/transparent</item>
     </style>
 
-    <!--    Animation switch activity-->
+    <style name="SplashActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimaryDark">@color/black</item>
+
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:listDivider">@android:color/black</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash_speed_backpack</item>
+
+        <item name="colorPrimaryDark">@color/color_status_bar_splash</item>
+
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:listDivider">@android:color/transparent</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#AE000000</item>
+    </style>
+
+    <!-- Animation switch activity-->
     <style name="CustomActivityAnimation" parent="android:Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_in_left</item>
@@ -29,7 +60,7 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_in_right_finish</item>
     </style>
 
-    <!--    Radius ShapeableImageView-->
+    <!-- Radius ShapeableImageView-->
     <style name="circleImageView" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -39,7 +70,7 @@
     <style name="CustomProgressDialog" parent="android:Theme.DeviceDefault.Dialog">
         <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
         <item name="DialogTitleText">Please Wait</item>
-        <item name="DialogSpotColor">@android:color/holo_orange_dark</item>
+        <item name="DialogSpotColor">@color/teal_200</item>
         <item name="DialogSpotCount">8</item>
     </style>
 </resources>
